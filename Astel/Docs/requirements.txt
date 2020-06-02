@@ -1,0 +1,8 @@
+robotframework
+robotframework-selenium2library
+robotframework-requestslibray
+robotframework-soaplibrary
+robotframework-sudslibrary
+zeep
+six
+requests

@@ -1,0 +1,45 @@
+{
+    "setup":
+    {
+        "SITENAME":"GloRep",
+        "BROWSER":"chrome",
+        "WEBURL":"http://41.78.233.248/GloRep.V20.1/"
+    },
+
+    "GloRep_Login":
+    {
+        "ValidUserLogin":
+        [
+            {
+                "Login_Email":"expleo@astel.co.za",
+                "Login_Password":"Astel@123"
+
+            }
+        ],
+        "InvalidUserLoginEmail":
+        [
+            {
+                "InvalidLogin_IncorrectEmail":"expleo123@astel.co.za",
+                "InValidLogin_Password":"Astel@123",
+                "InvalidLoginValidation":"Invalid username and/or password"
+
+            }
+        ],
+        "InvalidUserLoginPassword":
+        [
+            {
+                "InvalidLogin_Email":"expleo@astel.co.za",
+                "InValidLogin_IncorrectPassword":"Astel@1234",
+                "InvalidLoginValidation":"Invalid username and/or password"
+
+            }
+        ],
+        "EmptyUserDetails":
+        [
+            {
+                "EmptyUserDetailsEmailValidation":"The Email field is required.",
+                "EmptyUserDetailsPasswordValidation":"The Password field is required."
+            }
+        ]
+    }
+}
