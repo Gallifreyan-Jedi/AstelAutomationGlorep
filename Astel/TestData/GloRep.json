@@ -3,7 +3,7 @@
     {
         "SITENAME":"GloRep",
         "BROWSER":"chrome",
-        "WEBURL":"http://41.78.233.248/GloRep.V20.1/"
+        "WEBURL":"http://astelqa-za.southafricanorth.cloudapp.azure.com/GloRep.V20.1/"
     },
 
     "GloRep_Login":
@@ -11,8 +11,8 @@
         "ValidUserLogin":
         [
             {
-                "Login_Email":"expleo@astel.co.za",
-                "Login_Password":"Astel@123"
+                "Login_Email":"admin@astel.co.za",
+                "Login_Password":"Bill#777187"
 
             }
         ],
@@ -39,6 +39,31 @@
             {
                 "EmptyUserDetailsEmailValidation":"The Email field is required.",
                 "EmptyUserDetailsPasswordValidation":"The Password field is required."
+            }
+        ]
+    },
+    "Glorep_Reseller_Details":
+    {
+        "Add_Reseller":
+        [
+            {
+                "Code":"DRET1",
+                "Username":"drexpleo@expleogroup.com",
+                "Password":"Bill#777187",
+                "Title":"Mr",
+                "FirstName":"DRTester",
+                "Lastname":"ExpleoTester",
+                "Status":"Active",
+                "Service_Provider":"Fibre",
+                "Base_Currency":"",
+                "Contact_Person":"",
+                "Contact_email":"",
+                "Mobile_Number":"",
+                "Landline_Number":"",
+                "Technoligies":"",
+                "Show_Storefront":"",
+                "Physical_Address_1":"",
+                "Physical_Address_2":""
             }
         ]
     }
