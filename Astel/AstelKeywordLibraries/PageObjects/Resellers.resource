@@ -40,79 +40,41 @@ ${Reseller_Submit_Form}             xpath = //button[@class='btn btn-primary use
 
 
 *** Keywords ***
-Click on Add new Reseller
+# Input Reseller Code
+# Input Reseller Username
+# Input Reseller Password
+# Input Reseller First Name
+# Input Reseller Last Name 
+# Input Reseller Contact Person
+# Input Reseller Contact Email
+# Input Reseller Mobile Number
+# Input Reseller Landline Number
+# Input Reseller Technologies
+# Input Reseller Updated Landline Number
+# Input Reseller Updated Mobile Number
+# Input Reseller Physical Address 1
+# Input Reseller Physical Address 2
 
+# Select Reseller Show Storefront Options 
+# Select Reseller Status
+# Select Reseller Base Currency
+# Select Reseller Title
 
-Input Reseller Code
+# Click on Add new Reseller
+# Click Submit Reseller
+# Click on Edit Reseller
+# Click on View Packages
 
+# Search for Reseller
 
-Input Reseller Username
+# Validate Reseller Updated Landline Number
+# Validate Reseller Updated Mobile Number
 
+Input Reseller ${Element_Value} at ${Element_Location}
+    Input text     ${Element_Location}     ${Element_Value}
+    Capture Page Screeshot 
 
-Input Reseller Password
-
-
-Select Reseller Title
-
-
-Input Reseller First Name
-
-
-Input Reseller Last Name 
-
-
-Select Reseller Status
-
-
-Select Reseller Base Currency
-
-
-Input Reseller Contact Person
-
-
-Input Reseller Contact Email
-
-
-Input Reseller Mobile Number
-
-
-Input Reseller Landline Number
-
-
-Input Reseller Technologies
-
-
-Select Reseller Show Storefront Options 
-
-
-Input Reseller Physical Address 1
-
-
-Input Reseller Physical Address 2
-
-
-Click Submit Reseller
-
-###########################################################
-
-Search for Reseller
-
-
-Click on Edit Reseller
-
-
-Input Reseller Updated Landline Number
-
-
-
-Input Reseller Updated Mobile Number
-
-
-Validate Reseller Updated Landline Number
-
-
-Validate Reseller Updated Mobile Number
-
-
-###########################################################
-Click on View Packages
+Click on ${Element_Location}
+    Click Element    ${Element_Location}
+    Sleep  10s
+    

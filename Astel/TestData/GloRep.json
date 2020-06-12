@@ -47,23 +47,7 @@
         "Add_Reseller":
         [
             {
-                "Code":"DRET1",
-                "Username":"drexpleo@expleogroup.com",
-                "Password":"Bill#777187",
-                "Title":"Mr",
-                "FirstName":"DRTester",
-                "Lastname":"ExpleoTester",
-                "Status":"Active",
-                "Service_Provider":"Fibre",
-                "Base_Currency":"",
-                "Contact_Person":"",
-                "Contact_email":"",
-                "Mobile_Number":"",
-                "Landline_Number":"",
-                "Technoligies":"",
-                "Show_Storefront":"",
-                "Physical_Address_1":"",
-                "Physical_Address_2":""
+                "FirstName":"Deashen"
             }
         ]
     }
