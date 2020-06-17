@@ -40,41 +40,116 @@ ${Reseller_Submit_Form}             xpath = //button[@class='btn btn-primary use
 
 
 *** Keywords ***
-# Input Reseller Code
-# Input Reseller Username
-# Input Reseller Password
-# Input Reseller First Name
-# Input Reseller Last Name 
-# Input Reseller Contact Person
-# Input Reseller Contact Email
-# Input Reseller Mobile Number
-# Input Reseller Landline Number
-# Input Reseller Technologies
-# Input Reseller Updated Landline Number
-# Input Reseller Updated Mobile Number
-# Input Reseller Physical Address 1
-# Input Reseller Physical Address 2
+Input Reseller Code
+    [Arguments]    ${Element_Value}
+    Input text     ${Reseller_Code}     ${Element_Value}
+    Capture Page Screenshot 
 
-# Select Reseller Show Storefront Options 
-# Select Reseller Status
-# Select Reseller Base Currency
-# Select Reseller Title
+Input Reseller Username
+    [Arguments]    ${Glorep_Username}
+    Input text     ${Reseller_Username}     ${Glorep_Username}
+    Capture Page Screenshot 
 
-# Click on Add new Reseller
-# Click Submit Reseller
-# Click on Edit Reseller
-# Click on View Packages
+Input Reseller Password
+    [Arguments]    ${Element_Value}
+    Input text     ${Reseller_Password}     ${Element_Value}
+    Capture Page Screenshot 
 
-# Search for Reseller
+Input Reseller First Name
+    [Arguments]    ${Element_Value}
+    Input text     ${Reseller_FirstName}     ${Element_Value}
+    Capture Page Screenshot 
 
-# Validate Reseller Updated Landline Number
-# Validate Reseller Updated Mobile Number
+Input Reseller Last Name 
+    [Arguments]    ${Element_Value}
+    Input text     ${Reseller_LastName}     ${Element_Value}
+    Capture Page Screenshot 
 
-Input Reseller ${Element_Value} at ${Element_Location}
-    Input text     ${Element_Location}     ${Element_Value}
-    Capture Page Screeshot 
+Input Reseller Contact Person
+    [Arguments]    ${Element_Value}
+    Input text     ${Reseller_Contact_Person}     ${Element_Value}
+    Capture Page Screenshot 
 
-Click on ${Element_Location}
-    Click Element    ${Element_Location}
+Input Reseller Contact Email
+    [Arguments]    ${Element_Value}
+    Input text     ${Reseller_Email}     ${Element_Value}
+    Capture Page Screenshot 
+
+Input Reseller Mobile Number
+    [Arguments]    ${Element_Value}
+    Input text     ${Reseller_Mobile_Number}     ${Element_Value}
+    Capture Page Screenshot 
+
+Input Reseller Landline Number
+    [Arguments]    ${Element_Value}
+    Input text     ${Reseller_Landline_Number}     ${Element_Value}
+    Capture Page Screenshot 
+
+Input Reseller Technologies
+    [Arguments]    ${Element_Value}
+    Input text     ${Reseller_Technologies}     ${Element_Value}
+    Capture Page Screenshot 
+
+Input Reseller Updated Landline Number
+    [Arguments]    ${Element_Value}
+    Input text     ${Reseller_Landline_Number}     ${Element_Value}
+    Capture Page Screenshot 
+
+Input Reseller Updated Mobile Number
+    [Arguments]    ${Element_Value}
+    Input text     ${Reseller_Mobile_Number}     ${Element_Value}
+    Capture Page Screenshot 
+
+Input Reseller Physical Address 1
+    [Arguments]    ${Element_Value}
+    Input text     ${Reseller_Physical_Address1}     ${Element_Value}
+    Capture Page Screenshot 
+
+Input Reseller Physical Address 2
+    [Arguments]    ${Element_Value}
+    Input text     ${Reseller_Physical_Address2}     ${Element_Value}
+    Capture Page Screenshot 
+
+Select Reseller Show Storefront Options 
+
+
+Select Reseller Status
+
+
+Select Reseller Base Currency
+
+
+Select Reseller Title
+
+
+Click on Add new Reseller
+    Click Element    ${Add_New_Reseller}
     Sleep  10s
+
+Click Submit Reseller
+
+
+Click on Edit Reseller
+
+
+Click on View Packages
+
+
+Search for Reseller
+
+
+Validate Reseller Updated Landline Number
+
+
+Validate Reseller Updated Mobile Number
+
+
+# Input Reseller ${Element_Value} at ${Element_Location}
+#     [Arguments]    ${Element_Value}
+#     Input text     ${Element_Location}     ${Element_Value}
+#     Capture Page Screeshot 
+
+# Click on ${Element_Location}
+#     Click Element    ${Element_Location}
+#     Sleep  10s
     

@@ -42,12 +42,28 @@
             }
         ]
     },
-    "Glorep_Reseller_Details":
+    "GlorepResellerDetails":
     {
-        "Add_Reseller":
+        "AddReseller":
         [
             {
-                "FirstName":"Deashen"
+                "Glorep_Code":"DREx1",
+                "Glorep_Username":"drexpleo@expleogroup.com",
+                "Glorep_Password":"Bill#777187",
+                "Glorep_Title":"Mr",
+                "Glorep_FirstName":"DRTester",
+                "Glorep_Lastname":"ExpleoTester",
+                "Glorep_Status":"Active",
+                "Glorep_Service_Provider":"Fibre",
+                "Glorep_Base_Currency":"Rand",
+                "Glorep_Contact_Person":"DRTester",
+                "Glorep_Contact_Email":"drexpleo@expleogroup.com",
+                "Glorep_Mobile_Number":"0821234567",
+                "Glorep_Landline_Number":"0315634253",
+                "Glorep_Technologies":"IoT - IoT",
+                "Glorep_Show_Storefront":"Active",
+                "Glorep_Physical_Address_1":"54 Ncondo Place",
+                "Glorep_Physical_Address_2":"Durban"
             }
         ]
     }

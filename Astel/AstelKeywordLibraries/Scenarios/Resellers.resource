@@ -3,22 +3,22 @@ Documentation  Define Common keywords that are linked to login on the GloRep App
 
 *** Keywords ***
 Add New Reseller
-    Get GloRep Add Reseller data
-    :FOR  ${Item}  IN  ${Glorep_Add_Reseller_Details}
-    \  Login of an existing user         
-    \  Click on ${Add_New_Reseller}        
-    # \  Input Reseller ${Item["Code"]} at ${Reseller_Code}
-    \  Input Reseller ${Item["FirstName"]} at ${Reseller_FirstName}     
-    # \  Input Reseller    ${Item["Password"]}   
-    # \  Input Reseller    ${Item["FirstName"]}
-    # \  Input Reseller    ${Item["Lastname"]}
-    # \  Input Reseller    ${Item["Contact_Person"]}
-    # \  Input Reseller    ${Item["Contact_Email"]}
-    # \  Input Reseller    ${Item["Mobile_Number"]}
-    # \  Input Reseller    ${Item["Landline_Number"]}
-    # \  Input Reseller    ${Item["Technologies"]}                 
-    # \  Input Reseller    ${Item["Physical_Address_1"]}
-    # \  Input Reseller    ${Item["Physical_Address_2"]}
+    Get GloRep Add Reseller data    
+    Login of an existing user         
+    Click on Add New Reseller  
+    :FOR  ${Item}  IN  @{GlorepAddResellerDetails}
+    # \  Input Reseller Code   ${Item["Code"]} 
+    \  Input Reseller Username   ${Item["Glorep_Username"]}      
+    \  Input Reseller Password   ${Item["Glorep_Password"]}   
+    # \  Input Reseller First Name    ${Item["Glorep_FirstName"]}
+    # \  Input Reseller Last Name   ${Item["Glorep_Lastname"]}
+    # \  Input Reseller Contact Person   ${Item["Glorep_Contact_Person"]}
+    # \  Input Reseller Contact Email   ${Item["Glorep_Contact_Email"]}
+    # \  Input Reseller Mobile Number   ${Item["Glorep_Mobile_Number"]}
+    # \  Input Reseller LandLine Number   ${Item["Glorep_Landline_Number"]}
+    # \  Input Reseller Technologies   ${Item["Glorep_Technologies"]}                 
+    # \  Input Reseller Physical Address 1   ${Item["Glorep_Physical_Address_1"]}
+    # \  Input Reseller Physical Address 2   ${Item["Glorep_Physical_Address_2"]}
     # \  Select Reseller Show Storefront Options          
     # \  Select Reseller Status         
     # \  Select Reseller Base Currency         

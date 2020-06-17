@@ -28,5 +28,5 @@ Get GloRep Empty User details data
     Set Global Variable  ${GloRepEmptyUserDetails}  
 
 Get GloRep Add Reseller data
-    ${Glorep_Add_Reseller_Details}=   Set Variable    ${Data["Glorep_Reseller_Details"]["Add_Reseller"]}
-    Set Global Variable  ${Glorep_Add_Reseller_Details}
+    ${GlorepAddResellerDetails}=  Set Variable  ${Data["GlorepResellerDetails"]["AddReseller"]}
+    Set Global Variable  ${GlorepAddResellerDetails}
