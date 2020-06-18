@@ -47,23 +47,32 @@
         "AddReseller":
         [
             {
-                "Glorep_Code":"DREx1",
-                "Glorep_Username":"drexpleo@expleogroup.com",
+                "Glorep_Code":"MRSEx1",
+                "Glorep_Username":"Mrsexpleo@expleogroup.com",
                 "Glorep_Password":"Bill#777187",
-                "Glorep_Title":"Mr",
-                "Glorep_FirstName":"DRTester",
+                "Glorep_Title":"Prof",
+                "Glorep_FirstName":"MrsTester",
                 "Glorep_Lastname":"ExpleoTester",
                 "Glorep_Status":"Active",
-                "Glorep_Service_Provider":"Fibre",
+                "Glorep_Service_Provider":"IoT - IoT",
                 "Glorep_Base_Currency":"Rand",
                 "Glorep_Contact_Person":"DRTester",
-                "Glorep_Contact_Email":"drexpleo@expleogroup.com",
-                "Glorep_Mobile_Number":"0821234567",
+                "Glorep_Contact_Email":"mrsexpleo@expleogroup.com",
+                "Glorep_Mobile_Number":"0826665544",
                 "Glorep_Landline_Number":"0315634253",
-                "Glorep_Technologies":"IoT - IoT",
+                "Glorep_Technologies":"IoT",
                 "Glorep_Show_Storefront":"Active",
                 "Glorep_Physical_Address_1":"54 Ncondo Place",
                 "Glorep_Physical_Address_2":"Durban"
+            }
+        ],
+        "EditReseller":
+        [
+            {
+                "Glorep_Code":"MRsEx1",
+                "Glorep_Contact_Email":"mrsexpleo@expleogroup.com",
+                "Glorep_Mobile_Number":"0825556666",
+                "Glorep_Landline_Number":"0315631111"
             }
         ]
     }

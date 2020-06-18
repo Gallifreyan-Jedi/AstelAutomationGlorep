@@ -30,3 +30,7 @@ Get GloRep Empty User details data
 Get GloRep Add Reseller data
     ${GlorepAddResellerDetails}=  Set Variable  ${Data["GlorepResellerDetails"]["AddReseller"]}
     Set Global Variable  ${GlorepAddResellerDetails}
+
+Get GloRep Edit Reseller data
+    ${GlorepEditResellerDetails}=  Set Variable  ${Data["GlorepResellerDetails"]["EditReseller"]}
+    Set Global Variable  ${GlorepEditResellerDetails}
