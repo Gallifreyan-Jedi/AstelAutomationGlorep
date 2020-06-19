@@ -11,8 +11,12 @@ ${Edit_Existing_Reseller_Code}      xpath = //a[@id='GoToReseller']//span
 ${Search_Reseller}                  xpath = //label[contains(text(),'Search:')]//input
 ${View_Packages}                    xpath = //a[@id='ViewPackages']//span
 
-# Add Reseller Pop up
-${Reseller_PopUp}                   xpath = //strong[contains(text(),'Add Reseller')]
+# Popup Validation
+${Reseller_PopUp_Packages}          xpath = //strong[contains(text(),'Assigned Packages')]
+${Reseller_PopUp_Edit}               xpath = //strong[contains(text(),'EditReseller')]
+${Reseller_PopUp_Add}               xpath = //strong[contains(text(),'Add Reseller')]
+
+# Add/Edit Reseller Pop up 
 ${Reseller_Code}                    xpath = //input[@id='ResellerCode']
 ${Reseller_Username}                xpath = //input[@id='Username']
 ${Reseller_Password}                xpath = //input[@id='Password']
@@ -160,8 +164,9 @@ Click on Edit Reseller
     Click Element    ${Edit_Existing_Reseller_Code}
     Capture Page Screenshot 
 
-Click on View Packages
-
+Click on View Reseller Packages
+    Click Element     ${View_Packages}
+    Capture Page Screenshot
 
 Search for Reseller
     [Arguments]    ${Element_Value}
@@ -178,13 +183,17 @@ Validate Reseller Updated Mobile Number
     Textfield Value Should Be     ${Reseller_Mobile_Number}       ${VerifyValue}
     Capture Page Screenshot
 
+Validate Edit Reseller PopUp
+    Element Should Be Visible       ${Reseller_PopUp_Edit}
+    Capture Page Screenshot
 
+Validate Add Reseller PopUp
+    Element Should Be Visible       ${Reseller_PopUp_Add}
+    Capture Page Screenshot
 
-
-
-
-
-
+Validate Reseller View Packages PopUp
+    Element Should Be Visible       ${Reseller_PopUp_Packages}
+    Capture Page Screenshot
 
 
 

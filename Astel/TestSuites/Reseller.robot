@@ -12,7 +12,12 @@ Test Teardown  Terminate Application Under Test
 #     Set Selenium Speed    0.2
 #     Add New Reseller
 # 
-Test Creating a Reseller User
+# Test Creating a Reseller User
+#     [Documentation]  Verify that the GloRep Application allows existing users to add a reseller
+#     Set Selenium Speed    0.2
+#     Edit Existing Reseller
+# 
+Test View Reseller View Packages 
     [Documentation]  Verify that the GloRep Application allows existing users to add a reseller
     Set Selenium Speed    0.2
-    Edit Existing Reseller
+    View Reseller Packages

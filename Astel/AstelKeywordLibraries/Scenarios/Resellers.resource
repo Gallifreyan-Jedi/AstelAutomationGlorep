@@ -6,6 +6,7 @@ Add New Reseller
     Get GloRep Add Reseller data    
     Login of an existing user         
     Click on Add New Reseller  
+    Validate Add Reseller PopUp
     :FOR  ${Item}  IN  @{GlorepAddResellerDetails}
     \  Input Reseller Code   ${Item["Glorep_Code"]} 
     \  Input Reseller Username   ${Item["Glorep_Username"]}      
@@ -37,6 +38,7 @@ Edit Existing Reseller
     :FOR  ${Item}  IN  @{GlorepEditResellerDetails}
     \  Search for Reseller  ${Item["Glorep_Code"]} 
     \  Click on Edit Reseller        
+    \  Validate Edit Reseller PopUp
     \  Input Reseller Mobile Number   ${Item["Glorep_Mobile_Number"]}
     \  Input Reseller LandLine Number   ${Item["Glorep_Landline_Number"]} 
     \  Click Submit Reseller
@@ -44,3 +46,11 @@ Edit Existing Reseller
     \  Click on Edit Reseller
     \  Validate Reseller Updated Landline Number   ${Item["Glorep_Landline_Number"]}
     \  Validate Reseller Updated Mobile Number   ${Item["Glorep_Mobile_Number"]}
+
+View Reseller Packages
+    Get GloRep Add Reseller data    
+    Login of an existing user         
+    :FOR  ${Item}  IN  @{GlorepAddResellerDetails}
+    \  Search for Reseller  ${Item["Glorep_Code"]} 
+    \  Click on View Reseller Packages    
+    \  Validate Reseller View Packages PopUp
