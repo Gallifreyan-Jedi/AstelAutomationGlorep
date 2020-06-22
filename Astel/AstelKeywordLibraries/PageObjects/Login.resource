@@ -8,7 +8,7 @@ Library  Selenium2Library
 ${Email}			    		xpath = //*[@id="Email"]
 ${Password} 		    		xpath = //*[@id="Password"]
 ${login_button}		    		xpath = //div[@id='mCSB_1_container']/div/form/div[3]/div/div/input
-${header}						xpath = //img[@class='pull-left']
+${header}						xpath = //div[@class='sidebar-menu']
 
 ${forgot_password_link} 		xpath = //a[@class='nobold']
 ${forgot_password_username}	    xpath = //input[@id='Username']

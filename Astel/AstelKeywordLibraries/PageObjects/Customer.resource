@@ -79,6 +79,7 @@ Input Customer Mobile Number
 
 Input Customer Landline Number
 	[Arguments]     ${CustLandlineValue}
+	Scroll Element Into View 	${CustomerLandlineNumber}
 	Input Text		${CustomerLandlineNumber}	${CustLandlineValue}
 	Capture Page Screenshot 
 

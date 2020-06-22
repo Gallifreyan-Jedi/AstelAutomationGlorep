@@ -44,10 +44,8 @@
         "ResellerLogin":
         [
             {
-                "Login_Email":"admin@astel.co.za",
-                "Login_Password":"Bill#777187",
-                "ResellerCode":"DREx1",
-                "ResellerName":"DrTester"
+                "Login_Email":"naveshann@astel.co.za",
+                "Login_Password":"Astel@123"
             }
         ]
     },
@@ -107,7 +105,7 @@
                 "CustRegion":"Not Applicable",
                 "CustPrefferedLanguage":"English",
                 "CustPaymentType":"Cash/EFT",
-                "Vat":"Test Vat",
+                "Vat":"VAT @ 15%",
                 "DeliveryMethod":"Email",
                 "Classification":"Normal",
                 "Remarks":"Test Remarks",

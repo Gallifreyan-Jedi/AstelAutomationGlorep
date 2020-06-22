@@ -48,6 +48,3 @@ Login as Reseller
     \  Sleep   5s
     \  Click GloRep Login Button 
     \  Validate Succesful Login
-    \  Search for Reseller          ${Item["ResellerCode"]}
-    \  Click Login As Reseller
-    # \  Validate Reseller Login      ${Item["ResellerName"]}
