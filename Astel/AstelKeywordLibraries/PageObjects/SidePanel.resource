@@ -5,6 +5,9 @@ Documentation  Contains all the keywords for the actions that can be performed o
 Library  Selenium2Library
 
 *** Variable ***
+${CustomerMenuReseller}             xpath = //span[contains(text(),'Customers')]
+${CustomerCreateMenuReseller}       xpath = //a[contains(text(),'Create Customer')]
+${ViewCustomerMenuReseller}         xpath = //a[contains(text(),'View Customers')]
 ${Admin_Side_Panel}                             xpath = //span[contains(text(),'Administration')]
 ${Admin_Service_User_Management}                xpath = //a[contains(text(),'Service Provider User Management')]
 
@@ -18,3 +21,15 @@ ${Add_New_Admin_User}                           xpath = //a[@id='newSpAdmin']//s
 #     [Arguments] 	${Email_Value}
 # 	Input Text	   ${Email}		${Email_Value}
 # 	Capture Page Screenshot   
+
+Click Customer Menu Item
+    Click Element       ${CustomerMenuReseller}
+    Capture Page Screenshot
+
+Click Create customer Menu Item
+    Click Element       ${CustomerCreateMenuReseller}
+    Capture Page Screenshot
+
+Click View Customer Menu
+    Click Element       ${ViewCustomerMenuReseller}
+    Capture Page Screenshot

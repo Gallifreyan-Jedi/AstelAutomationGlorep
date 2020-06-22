@@ -6,16 +6,20 @@ Library  Selenium2Library
 
 *** Variable ***
 # Reseller Main Page 
-${Add_New_Reseller}                     xpath = //a[@id='newReseller']
-${Edit_Existing_Reseller_Code}          xpath = //a[@id='GoToReseller']//span
-${Search_Reseller}                      xpath = //label[contains(text(),'Search:')]//input
-${View_Packages}                        xpath = //a[@id='ViewPackages']//span
+${Add_New_Reseller}                 xpath = //a[@id='newReseller']
+${Edit_Existing_Reseller_Code}      xpath = //a[@id='GoToReseller']//span
+${Search_Reseller}                  xpath = //label[contains(text(),'Search:')]//input
+${View_Packages}                    xpath = //a[@id='ViewPackages']//span
+${LoginAsReseller}                  xpath = //a[@id='Login']
+${LoginAsResellerValue}             dummy
+${LoginAsResellerValidate}          xpath = //span[contains(text(),'You are currently logged in as reseller : ${LoginAsResellerValue}')]
+
 
 # Popup Validation
 ${Reseller_PopUp_Packages}              xpath = //strong[contains(text(),'Assigned Packages')]
 ${Reseller_PopUp_Edit}                  xpath = //strong[contains(text(),'EditReseller')]
 ${Reseller_PopUp_Add}                   xpath = //strong[contains(text(),'Add Reseller')]
-    
+
 # Add/Edit Reseller Pop up 
 ${Reseller_Code}                        xpath = //input[@id='ResellerCode']
 ${Reseller_Username}                    xpath = //input[@id='Username']
@@ -34,7 +38,7 @@ ${Reseller_Status_Chosen}               xpath = //option[contains(text(),'${Rese
 
 ${Reseller_Base_Currency}               xpath = //select[@id='BaseCurrency']
 ${Reseller_Base_Currency_Value}         dummy
-${Reseller_Base_Currency_Chosen}        xpath = //option[contains(text(),'${Reseller_Base_Currency_Value}')] 
+${Reseller_Base_Currency_Chosen}        xpath = //option[contains(text(),'${Reseller_Base_Currency_Value}')]
 
 ${Reseller_Contact_Person}              xpath = //input[@id='ContactPerson']
 ${Reseller_Email}                       xpath = //input[@id='ContactEmail']
@@ -150,6 +154,10 @@ Select Reseller Service Provider
     Click Element       ${Reseller_Service_Provider_Chosen}
     Capture Page Screenshot 
 
+Click Login As Reseller
+    Click Element      ${LoginAsReseller}
+    Capture Page Screenshot
+
 Click on Add new Reseller
     Click Element    ${Add_New_Reseller}
     # Sleep  10s
@@ -195,7 +203,10 @@ Validate Reseller View Packages PopUp
     Element Should Be Visible       ${Reseller_PopUp_Packages}
     Capture Page Screenshot
 
-
+Validate Reseller Login
+    [Arguments]     ${LoginAsResellerValue}
+    Page should Contain Element     ${LoginAsResellerValidate}
+    Capture Page Screenshot
 
 
 
