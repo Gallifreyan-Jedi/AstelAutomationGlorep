@@ -10,6 +10,10 @@ ${Add_New_Reseller}                 xpath = //a[@id='newReseller']
 ${Edit_Existing_Reseller_Code}      xpath = //a[@id='GoToReseller']//span
 ${Search_Reseller}                  xpath = //label[contains(text(),'Search:')]//input
 ${View_Packages}                    xpath = //a[@id='ViewPackages']//span
+${LoginAsReseller}                  xpath = //a[@id='Login']
+${LoginAsResellerValue}             dummy
+${LoginAsResellerValidate}          xpath = //span[contains(text(),'You are currently logged in as reseller : ${LoginAsResellerValue}')]
+
 
 # Popup Validation
 ${Reseller_PopUp_Packages}          xpath = //strong[contains(text(),'Assigned Packages')]
@@ -150,6 +154,10 @@ Select Reseller Service Provider
     Click Element       ${Reseller_Service_Provider_Chosen}
     Capture Page Screenshot 
 
+Click Login As Reseller
+    Click Element      ${LoginAsReseller}
+    Capture Page Screenshot
+    
 Click on Add new Reseller
     Click Element    ${Add_New_Reseller}
     # Sleep  10s
@@ -195,7 +203,10 @@ Validate Reseller View Packages PopUp
     Element Should Be Visible       ${Reseller_PopUp_Packages}
     Capture Page Screenshot
 
-
+Validate Reseller Login 
+    [Arguments]     ${LoginAsResellerValue}
+    Page should Contain Element     ${LoginAsResellerValidate}  
+    Capture Page Screenshot
 
 
 

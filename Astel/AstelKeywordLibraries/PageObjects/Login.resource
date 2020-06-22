@@ -7,7 +7,7 @@ Library  Selenium2Library
 *** Variable ***
 ${Email}			    		xpath = //*[@id="Email"]
 ${Password} 		    		xpath = //*[@id="Password"]
-${login_button}		    		xpath = //*[@id="mCSB_1_container"]/div/form/div[3]/div/div/input
+${login_button}		    		xpath = //div[@id='mCSB_1_container']/div/form/div[3]/div/div/input
 ${header}						xpath = //img[@class='pull-left']
 
 ${forgot_password_link} 		xpath = //a[@class='nobold']
@@ -27,7 +27,7 @@ Input GloRep Login Password
 	Capture Page Screenshot   
 
 Click GloRep Login Button 
-	Click Button    ${login_button}	
+	Click Element    ${login_button}	
 	Capture Page Screenshot   
 
 Click GloRep Password
@@ -55,3 +55,4 @@ Validate Unsuccesful Login
 Validate Succesful Login
 	Page should contain Element		${header}
 	Capture Page Screenshot  
+	

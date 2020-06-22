@@ -40,6 +40,15 @@
                 "EmptyUserDetailsEmailValidation":"The Email field is required.",
                 "EmptyUserDetailsPasswordValidation":"The Password field is required."
             }
+        ],
+        "ResellerLogin":
+        [
+            {
+                "Login_Email":"admin@astel.co.za",
+                "Login_Password":"Bill#777187",
+                "ResellerCode":"DREx1",
+                "ResellerName":"DrTester"
+            }
         ]
     },
     "GlorepResellerDetails":
@@ -75,5 +84,45 @@
                 "Glorep_Landline_Number":"0315631111"
             }
         ]
+    },
+    "ResellerCreateCustomer":
+    {
+        "CreateCustomer":
+        [
+            {
+                "CustType":"Consumer",
+                "CustTitle":"Miss",
+                "CustIDNum":"1234567891025",
+                "CustStatus":"Active",
+                "CustEmail":"Lydia@hotmail.com",
+                "CustMobile":"1234567890",
+                "CustLandline":"1234567890",
+                "CustLandlineChange":"9999999999",
+                "CustAddressLine1":"5120",
+                "CustAddressLine2":"ABC Street",
+                "CustAddressLine3":"Durban",
+                "CustAddressLine4":"KZN",
+                "CustPostalCode":"5000",
+                "CustPrefferedCurrency":"Rands",
+                "CustRegion":"Not Applicable",
+                "CustPrefferedLanguage":"English",
+                "CustPaymentType":"Cash/EFT",
+                "Vat":"Test Vat",
+                "DeliveryMethod":"Email",
+                "Classification":"Normal",
+                "Remarks":"Test Remarks",
+                "JobTitle":"Tester",
+                "FunctionArea":"IT",
+                "FirstName":"Lydia",
+                "LastName":"Barker",
+                "Birthday":"27/04/1990",
+                "Mobile":"0142583697",
+                "Office":"0142582297",
+                "Email":"LydiaBarker@hotmail.com",
+                "Comments":"Test Comments",
+                "Search":"Lydia Barker"
+            }
+        ]
+            
     }
 }

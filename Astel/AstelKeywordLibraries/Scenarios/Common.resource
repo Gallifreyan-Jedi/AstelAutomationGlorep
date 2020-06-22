@@ -14,7 +14,8 @@ Launch Application Under Test
     Import Solution Keywords
     Open Browser  ${Data["setup"]["WEBURL"]}  ${BROWSER}
     Maximize Browser Window 
-    #Set Selenium speed  0.5s
+    Sleep   10s
+    # Set Selenium speed  0.5s
     # Validate on Home Page
     
 Terminate Application Under Test

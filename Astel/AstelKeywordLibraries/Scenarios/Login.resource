@@ -39,4 +39,15 @@ Login with empty user details
     \  Validate Unsuccesful Login     ${Item["EmptyUserDetailsEmailValidation"]}
     \  Validate Unsuccesful Login     ${Item["EmptyUserDetailsPasswordValidation"]}
 
-
+Login as Reseller
+    [Documentation]  Excecute the steps to login with correct existing user credentials
+    Get GloRep Valid Login Reseller data
+    :FOR  ${Item}  IN  @{GloRepResellerLoginData}
+    \  Input GloRep Login Email Address  ${Item["Login_Email"]}
+    \  Input GloRep Login Password  ${Item["Login_Password"]}
+    \  Sleep   5s
+    \  Click GloRep Login Button 
+    \  Validate Succesful Login
+    \  Search for Reseller          ${Item["ResellerCode"]}
+    \  Click Login As Reseller
+    # \  Validate Reseller Login      ${Item["ResellerName"]}
