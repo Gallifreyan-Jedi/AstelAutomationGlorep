@@ -6,53 +6,53 @@ Library  Selenium2Library
 
 *** Variable ***
 # Reseller Main Page 
-${Add_New_Reseller}                 xpath = //a[@id='newReseller']
-${Edit_Existing_Reseller_Code}      xpath = //a[@id='GoToReseller']//span
-${Search_Reseller}                  xpath = //label[contains(text(),'Search:')]//input
-${View_Packages}                    xpath = //a[@id='ViewPackages']//span
+${Add_New_Reseller}                     xpath = //a[@id='newReseller']
+${Edit_Existing_Reseller_Code}          xpath = //a[@id='GoToReseller']//span
+${Search_Reseller}                      xpath = //label[contains(text(),'Search:')]//input
+${View_Packages}                        xpath = //a[@id='ViewPackages']//span
 
 # Popup Validation
-${Reseller_PopUp_Packages}          xpath = //strong[contains(text(),'Assigned Packages')]
-${Reseller_PopUp_Edit}               xpath = //strong[contains(text(),'EditReseller')]
-${Reseller_PopUp_Add}               xpath = //strong[contains(text(),'Add Reseller')]
-
+${Reseller_PopUp_Packages}              xpath = //strong[contains(text(),'Assigned Packages')]
+${Reseller_PopUp_Edit}                  xpath = //strong[contains(text(),'EditReseller')]
+${Reseller_PopUp_Add}                   xpath = //strong[contains(text(),'Add Reseller')]
+    
 # Add/Edit Reseller Pop up 
-${Reseller_Code}                    xpath = //input[@id='ResellerCode']
-${Reseller_Username}                xpath = //input[@id='Username']
-${Reseller_Password}                xpath = //input[@id='Password']
+${Reseller_Code}                        xpath = //input[@id='ResellerCode']
+${Reseller_Username}                    xpath = //input[@id='Username']
+${Reseller_Password}                    xpath = //input[@id='Password']
 
-${Reseller_Title}                   xpath = //select[@id='Title']
-${Reseller_Title_Value}             dummy
-${Reseller_Title_Chosen}            xpath = //option[contains(text(),'${Reseller_Title_Value}')]
+${Reseller_Title}                       xpath = //select[@id='Title']
+${Reseller_Title_Value}                 dummy
+${Reseller_Title_Chosen}                xpath = //option[contains(text(),'${Reseller_Title_Value}')]
 
-${Reseller_FirstName}               xpath = //input[@id='FirstName']
-${Reseller_LastName}                xpath = //input[@id='LastName']
+${Reseller_FirstName}                   xpath = //input[@id='FirstName']
+${Reseller_LastName}                    xpath = //input[@id='LastName']
 
-${Reseller_Status_Value}            dummy
-${Reseller_Status}                  xpath = //select[@id='Status']
-${Reseller_Status_Chosen}           xpath = //option[contains(text(),'${Reseller_Status_Value}')]
+${Reseller_Status_Value}                dummy
+${Reseller_Status}                      xpath = //select[@id='Status']
+${Reseller_Status_Chosen}               xpath = //option[contains(text(),'${Reseller_Status_Value}')]
 
-${Reseller_Base_Currency}           xpath = //select[@id='BaseCurrency']
-${Reseller_Base_Currency_Value}     dummy
-${Reseller_Base_Currency_Chosen}    xpath = //option[contains(text(),'${Reseller_Base_Currency_Value}')] 
+${Reseller_Base_Currency}               xpath = //select[@id='BaseCurrency']
+${Reseller_Base_Currency_Value}         dummy
+${Reseller_Base_Currency_Chosen}        xpath = //option[contains(text(),'${Reseller_Base_Currency_Value}')] 
 
-${Reseller_Contact_Person}          xpath = //input[@id='ContactPerson']
-${Reseller_Email}                   xpath = //input[@id='ContactEmail']
-${Reseller_Mobile_Number}           xpath = //input[@id='MobileNumber']
-${Reseller_Landline_Number}         xpath = //input[@id='LandlineNumber']
-${Reseller_Storefront_Products}     xpath = //input[@id='ShowStorefrontProducts']
-${Reseller_Physical_Address1}       xpath = //input[@id='PhysicalAddress1']
-${Reseller_Physical_Address2}       xpath = //input[@id='PhysicalAddress2']
+${Reseller_Contact_Person}              xpath = //input[@id='ContactPerson']
+${Reseller_Email}                       xpath = //input[@id='ContactEmail']
+${Reseller_Mobile_Number}               xpath = //input[@id='MobileNumber']
+${Reseller_Landline_Number}             xpath = //input[@id='LandlineNumber']
+${Reseller_Storefront_Products}         xpath = //input[@id='ShowStorefrontProducts']
+${Reseller_Physical_Address1}           xpath = //input[@id='PhysicalAddress1']
+${Reseller_Physical_Address2}           xpath = //input[@id='PhysicalAddress2']
 
-${Reseller_Service_Provider}                xpath = //select[@id='ServiceProviderId']
-${Reseller_Service_Provider_Value}          dummy
-${Reseller_Service_Provider_Chosen}         xpath = //option[contains(text(),'${Reseller_Service_Provider_Value}')]
+${Reseller_Service_Provider}            xpath = //select[@id='ServiceProviderId']
+${Reseller_Service_Provider_Value}      dummy
+${Reseller_Service_Provider_Chosen}     xpath = //option[contains(text(),'${Reseller_Service_Provider_Value}')]
 
-${Reseller_Technologies}            xpath = //span[@class='select2-selection select2-selection--multiple']
-${Reseller_Technologies_Value}      dummy
-${Reseller_Technologies_Chosen}     xpath = //li[contains(text(),'${Reseller_Technologies_Value}')]
+${Reseller_Technologies}                xpath = //span[@class='select2-selection select2-selection--multiple']
+${Reseller_Technologies_Value}          dummy
+${Reseller_Technologies_Chosen}         xpath = //li[contains(text(),'${Reseller_Technologies_Value}')]
 
-${Reseller_Submit_Form}             xpath = //button[@class='btn btn-primary user']
+${Reseller_Submit_Form}                 xpath = //button[@class='btn btn-primary user']
 
 
 *** Keywords ***
