@@ -122,5 +122,28 @@
             }
         ]
             
+    },
+    "GlorepAdminUserDetails":
+    {
+        "AddNewAdminUser":
+        [
+            {
+                "Glorep_Admin_Username":"mrsexpleo@astel.co.za",
+                "Glorep_Admin_Password":"Bill#777187",
+                "Glorep_Admin_FirstName":"AutoMationTester",
+                "Glorep_Admin_Lastname":"ExpleoTester",
+                "Glorep_Admin_Mobile_Number":"0825556666"
+            }
+        ],
+        "EditAdminUser":
+        [
+            {
+                "Glorep_Admin_Username":"mrsexpleo@astel.co.za",
+                "Glorep_Admin_Password":"Bill#777187",
+                "Glorep_Admin_FirstName":"AutoMationTesterUpdated",
+                "Glorep_Admin_Lastname":"ExpleoTesterUpdated",
+                "Glorep_Admin_Mobile_Number":"0825556666"
+            }
+        ]
     }
 }
