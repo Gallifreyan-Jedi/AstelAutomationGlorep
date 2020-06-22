@@ -11,6 +11,7 @@ ${ViewCustomerMenuReseller}                     xpath = //a[contains(text(),'Vie
 
 ${Admin_Side_Panel}                             xpath = //span[contains(text(),'Administration')]
 ${Admin_Service_User_Management}                xpath = //a[contains(text(),'Service Provider User Management')]
+${User_Management}                              xpath = //a[contains(text(),'User Management')]
 
 ${Service_User_Management_Page}                 xpath = //strong[contains(text(),'Service Provider User Management')]
 
@@ -42,3 +43,7 @@ Click Create Service User Management Menu Item
 Validate Service User Management Page
 	Page should contain Element		${Service_User_Management_Page}
 	Capture Page Screenshot  
+
+Click Create User Menu Item
+    Click Element       ${User_Management}
+    Capture Page Screenshot

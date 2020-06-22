@@ -147,21 +147,28 @@
     },
     "GlorepUserDetails":
     {
-        "AddNewUser":
+        "ExistingUser":
         [
             {
                 "Glorep_Username":"Usertexpleo@astel.co.za",
+                "Glorep_Password":"Bill#777187"
+            }
+        ],
+        "AddNewUser":
+        [
+            {
+                "Glorep_Username":"UserReseller@astel.co.za",
                 "Glorep_Password":"Bill#777187",    
-                "Glorep_FirstName":"AutoMationUserTester",
+                "Glorep_FirstName":"AutoMationResellerUserTester",
                 "Glorep_Lastname":"ExpleoTester",
-                "Glorep_Job_Title":"Automation User Tester",
+                "Glorep_Job_Title":"Automation Reseller User Tester",
                 "Glorep_Mobile_Number":"0825556666"
             }
         ],
         "EditUser":
         [
             {
-                "Glorep_Username":"Usertexpleo@astel.co.za",
+                "Glorep_Username":"UserReseller@astel.co.za",
                 "Glorep_Password":"Bill#777187",
                 "Glorep_Mobile_Number":"0826667777"
             }

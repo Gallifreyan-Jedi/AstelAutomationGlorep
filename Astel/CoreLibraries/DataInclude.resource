@@ -55,6 +55,10 @@ Get GloRep Edit Admin User data
     Set Global Variable  ${GlorepEditAdminUserDetails}
 
 #User Data
+Get GloRep Reseller Login User data
+    ${GlorepLoginUserDetails}=  Set Variable  ${Data["GlorepUserDetails"]["ExistingUser"]}
+    Set Global Variable  ${GlorepLoginUserDetails}
+
 Get GloRep Add User data
     ${GlorepAddUserDetails}=  Set Variable  ${Data["GlorepUserDetails"]["AddNewUser"]}
     Set Global Variable  ${GlorepAddUserDetails}
