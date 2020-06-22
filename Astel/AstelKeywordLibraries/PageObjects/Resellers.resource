@@ -6,13 +6,13 @@ Library  Selenium2Library
 
 *** Variable ***
 # Reseller Main Page 
-${Add_New_Reseller}                 xpath = //a[@id='newReseller']
-${Edit_Existing_Reseller_Code}      xpath = //a[@id='GoToReseller']//span
-${Search_Reseller}                  xpath = //label[contains(text(),'Search:')]//input
-${View_Packages}                    xpath = //a[@id='ViewPackages']//span
-${LoginAsReseller}                  xpath = //a[@id='Login']
-${LoginAsResellerValue}             dummy
-${LoginAsResellerValidate}          xpath = //span[contains(text(),'You are currently logged in as reseller : ${LoginAsResellerValue}')]
+${Add_New_Reseller}                     xpath = //a[@id='newReseller']
+${Edit_Existing_Reseller_Code}          xpath = //a[@id='GoToReseller']//span
+${Search_Reseller}                      xpath = //label[contains(text(),'Search:')]//input
+${View_Packages}                        xpath = //a[@id='ViewPackages']//span
+${LoginAsReseller}                      xpath = //a[@id='Login']
+${LoginAsResellerValue}                 dummy
+${LoginAsResellerValidate}              xpath = //span[contains(text(),'You are currently logged in as reseller : ${LoginAsResellerValue}')]
 
 
 # Popup Validation

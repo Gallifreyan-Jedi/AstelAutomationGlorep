@@ -5,9 +5,9 @@ Documentation  Contains all the keywords for the actions that can be performed o
 Library  Selenium2Library
 
 *** Variable ***
-${CustomerMenuReseller}             xpath = //span[contains(text(),'Customers')]
-${CustomerCreateMenuReseller}       xpath = //a[contains(text(),'Create Customer')]
-${ViewCustomerMenuReseller}         xpath = //a[contains(text(),'View Customers')]
+${CustomerMenuReseller}                         xpath = //span[contains(text(),'Customers')]
+${CustomerCreateMenuReseller}                   xpath = //a[contains(text(),'Create Customer')]
+${ViewCustomerMenuReseller}         x           path = //a[contains(text(),'View Customers')]
 ${Admin_Side_Panel}                             xpath = //span[contains(text(),'Administration')]
 ${Admin_Service_User_Management}                xpath = //a[contains(text(),'Service Provider User Management')]
 
