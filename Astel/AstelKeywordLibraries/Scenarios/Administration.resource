@@ -16,11 +16,11 @@ Add New Admin User
     \  Input Admin Last Name   ${Item["Glorep_Admin_Lastname"]}
     \  Input Admin Job Title    ${Item["Glorep_Admin_Job_Title"]}
     \  Input Admin Mobile Number   ${Item["Glorep_Admin_Mobile_Number"]}
-    \  Click Force Change Password
+    \  Click Admin Force Change Password
     \  Click Admin Submit Button  
     \  Search for Reseller      ${Item["Glorep_Admin_Username"]}
     \  Click Edit Admin Button
-    \  Validate Admin User Updated Mobile Number   ${Item["Glorep_Mobile_Number"]}
+    \  Validate Admin User Updated Mobile Number   ${Item["Glorep_Admin_Mobile_Number"]}
 
 Edit Existing Admin User
     Get GloRep Edit Admin User data 
@@ -28,12 +28,11 @@ Edit Existing Admin User
     Click Side Administration Menu Item
     Click Create Service User Management Menu Item
     Validate Service User Management Page
-    :FOR  ${Item}  IN  @{GlorepAddAdminUserDetails}
+    :FOR  ${Item}  IN  @{GlorepEditAdminUserDetails}
     \  Search for Reseller      ${Item["Glorep_Admin_Username"]}
     \  Click Edit Admin Button
     \  Input Admin Mobile Number   ${Item["Glorep_Admin_Mobile_Number"]}
-    \  Click Force Change Password
     \  Click Admin Submit Button  
     \  Search for Reseller      ${Item["Glorep_Admin_Username"]}
     \  Click Edit Admin Button
-    \  Validate Admin User Updated Mobile Number   ${Item["Glorep_Mobile_Number"]}
+    \  Validate Admin User Updated Mobile Number   ${Item["Glorep_Admin_Mobile_Number"]}

@@ -50,7 +50,7 @@ Input Admin Mobile Number
     Input text     ${Admin_Mobile_Number}     ${Element_Value}
     Capture Page Screenshot
 
-Click Force Change Password
+Click Admin Force Change Password
     Click Element       ${Admin_Force_Change_Password}
     Capture Page Screenshot
 

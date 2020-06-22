@@ -50,7 +50,7 @@ Input User Mobile Number
     Input text     ${User_Mobile_Number}     ${Element_Value}
     Capture Page Screenshot
 
-Click Force Change Password
+Click User Force Change Password
     Click Element       ${User_Force_Change_Password}
     Capture Page Screenshot
 
