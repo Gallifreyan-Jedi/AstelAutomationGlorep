@@ -32,7 +32,17 @@ Test Teardown  Terminate Application Under Test
 #     Set Selenium Speed    0.2
 #     Edit User Password
 
-Test Deactivating a User
-    [Documentation]  Verify that the GloRep Application allows existing users to Deactivate a user as a reseller
-    Set Selenium Speed    0.2
-    Deactivate Existing User
+# Test Deactivating a User
+#     [Documentation]  Verify that the GloRep Application allows existing users to Deactivate a user as a reseller
+#     Set Selenium Speed    0.2
+#     Deactivate Existing User
+# 
+# Test Adding User to User Groups
+#     [Documentation]  Verify that the GloRep Application allows existing users to add a user to a user group 
+#     Set Selenium Speed    0.2
+#     Add user to User Group
+
+# Test Locking and Unlocking User Account
+#     [Documentation]  Verify that the GloRep Application allows existing users to Lock a user account 
+#     Set Selenium Speed    0.2
+#     Lock and Unlock User account

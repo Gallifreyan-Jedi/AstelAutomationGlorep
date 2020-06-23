@@ -12,7 +12,14 @@ ${User_Action_Dropdown}                         xpath = //tr[@class='odd']//a[@c
 ${Deactivate_User}                              xpath = //ul[@class='dropdown-menu dropdown-menu-right show']//a[@class='dropdown-item'][contains(text(),'Deactivate')]
 ${User_Deactivated_Status}                      xpath = //td[contains(text(),'False')]
 ${User_Groups}                                  xpath = //ul[@class='dropdown-menu dropdown-menu-right show']//a[@class='dropdown-item userGroups'][contains(text(),'User Groups')]
+${User_Groups_Value}                            dummy
+${User_Groups_Chosen}                           xpath = //option[contains(text(),'${User_Groups_Value}')]
+${Add_User_Groups}                              xpath = //button[@id='AddGroup']
+${Check_User_Group}                             xpath = //td[contains(text(),'${User_Groups_Value}')]
 ${User_Groups_Close_Dialog}                     xpath = //button[contains(text(),'×')]
+
+${User_Lock}                                    xpath = //ul[@class='dropdown-menu dropdown-menu-right show']//a[@class='dropdown-item'][contains(text(),'Lock')]
+${User_Unlock}                                  xpath = //a[contains(text(),'Unlock')]
 
 ${User_FirstName}                               xpath = //input[@id='FirstName']
 ${User_LastName}                                xpath = //input[@id='Surname']
@@ -97,4 +104,38 @@ Click Deactivate User
 
 Validate User is Deacivated 
     Element Should Be Visible       ${User_Deactivated_Status}
+    Capture Page Screenshot
+
+Click User Groups
+    Click Element       ${User_Groups}
+    Capture Page Screenshot
+
+Click Add User Group
+    Click Element       ${Add_User_Groups}
+    Capture Page Screenshot
+
+Select User Group
+    [Arguments]         ${User_Groups_Value}
+    Click Element       ${User_Groups_Chosen}
+    Capture Page Screenshot 
+
+Validate User Group Added
+    [Arguments]     ${User_Groups_Value}
+    Element Should Be Visible   ${Check_User_Group} 
+    Capture Page Screenshot
+
+Click Lock User
+    Click Element       ${User_Lock}
+    Capture Page Screenshot
+
+Click Unlock User
+    Click Element       ${User_Unlock}
+    Capture Page Screenshot
+
+Validate User Locked
+    Element Should Be Visible   ${User_Unlock} 
+    Capture Page Screenshot
+
+Validate User Unlocked
+    Element Should Be Visible   ${User_Lock} 
     Capture Page Screenshot

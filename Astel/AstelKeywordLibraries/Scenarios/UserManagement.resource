@@ -70,3 +70,35 @@ Deactivate Existing User
     \  Click Deactivate User
     \  Search for Reseller      ${Item["Glorep_Username"]}
     \  Validate User is Deacivated  
+
+Add user to User Group
+    Get GloRep Reseller Login User data         
+    Get GloRep Add User Groups data
+    Login as Reseller
+    Click Side Administration Menu Item
+    Click Create User Menu Item
+    :FOR  ${Item}  IN  @{GlorepAddUserGroupsDetails}
+    \  Search for Reseller      ${Item["Glorep_Username"]}
+    \  Click User Action Dropdown
+    \  Click User Groups
+    \  Select User Group        ${Item["Glorep_User_Group"]}
+    \  Click Add User Group
+    \  Validate User Group Added    ${Item["Glorep_User_Group"]}
+
+Lock and Unlock User account   
+    Get GloRep Reseller Login User data         
+    Get GloRep Add User Groups data
+    Login as Reseller
+    Click Side Administration Menu Item
+    Click Create User Menu Item
+    :FOR  ${Item}  IN  @{GlorepAddUserGroupsDetails}
+    \  Search for Reseller      ${Item["Glorep_Username"]}
+    \  Click User Action Dropdown
+    \  Click Lock User
+    \  Search for Reseller      ${Item["Glorep_Username"]}
+    \  Click User Action Dropdown
+    \  Validate User Locked 
+    \  Click Unlock User
+    \  Search for Reseller      ${Item["Glorep_Username"]}
+    \  Click User Action Dropdown
+    \  Validate User Unlocked  

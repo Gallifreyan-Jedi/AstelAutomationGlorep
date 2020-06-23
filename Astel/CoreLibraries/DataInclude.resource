@@ -66,3 +66,7 @@ Get GloRep Add User data
 Get GloRep Edit User data
     ${GlorepEditUserDetails}=  Set Variable  ${Data["GlorepUserDetails"]["EditUser"]}
     Set Global Variable  ${GlorepEditUserDetails}
+
+Get GloRep Add User Groups data
+    ${GlorepAddUserGroupsDetails}=  Set Variable  ${Data["GlorepUserDetails"]["AddUserGroups"]}
+    Set Global Variable  ${GlorepAddUserGroupsDetails}

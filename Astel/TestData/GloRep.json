@@ -172,6 +172,14 @@
                 "Glorep_Password":"Bill#777187",
                 "Glorep_Mobile_Number":"0826667777"
             }
+        ],
+        "AddUserGroups":
+        [
+            {
+                "Glorep_Username":"UserReseller@astel.co.za",
+                "Glorep_Password":"Bill#777187",
+                "Glorep_User_Group":"Administrator"
+            }
         ]
     }
 }
