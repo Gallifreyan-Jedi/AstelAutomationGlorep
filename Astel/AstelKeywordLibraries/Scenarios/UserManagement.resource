@@ -2,8 +2,6 @@
 Documentation  Define Common keywords that are linked to Administration of User Management on the GloRep Application
 
 *** Keywords ***
-#=============================================
-#Get flow of scenarios 
 Add New User
     Get GloRep Reseller Login User data         
     Get GloRep Add User data

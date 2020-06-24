@@ -181,5 +181,63 @@
                 "Glorep_User_Group":"Administrator"
             }
         ]
+    },
+    "GlorepCurrencyVATExchangeRateDetails":
+    {
+        "AddCurrencyDetails":
+        [
+            {
+                "Glorep_Currency_Code":"en-BW",
+                "Glorep_Currency_Description":"BWP Pula",
+                "Glorep_Currency_Symbol":"P",
+                "Glorep_Currency_ISO_Code":"BWP",
+                "Glorep_Currency_Status":"Active",
+                "Glorep_Currency_Override_Format":""
+            }
+        ],
+        "AddVATDetails":
+        [
+            {
+                "Glorep_VAT_Code":"TestVC150",
+                "Glorep_VAT_Description":"AutomationTestVat",
+                "Glorep_VAT_Value":"124",
+                "Glorep_VAT_Status":"Active",
+                "Glorep_VAT_Start_Date":"01/07/2020",
+                "Glorep_VAT_End_Date":"01/08/2020"
+            }
+        ],
+        "AddExchangeRateDetails":
+        [
+            {
+                "Glorep_ExRate_Base_Currency":"Rands",
+                "Glorep_ExRate_To_Currency":"Pula",
+                "Glorep_ExRate_To_Rate":"1",
+                "Glorep_ExRate_Start_Date":"01/07/2020",
+                "Glorep_ExRate_End_Date":"01/08/2020",
+                "Glorep_ExRate_Status":"Active",
+                "Glorep_ExRate_Description":"Rands to Pula"
+            }
+        ],
+        "EditCurrencyDetails":
+        [
+            {
+                "Glorep_Currency_Code":"en-BW",
+                "Glorep_Currency_Description":"Pula"
+            }
+        ],
+        "EditVATDetails":
+        [
+            {
+                "Glorep_VAT_Code":"TestVC150",
+                "Glorep_VAT_Value":"8"
+            }
+        ],
+        "EditExchangeRateDetails":
+        [
+            {
+                "Glorep_ExRate_Base_Currency":"Rands",
+                "Glorep_ExRate_To_Rate":"8"
+            }
+        ]
     }
 }

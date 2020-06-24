@@ -70,3 +70,27 @@ Get GloRep Edit User data
 Get GloRep Add User Groups data
     ${GlorepAddUserGroupsDetails}=  Set Variable  ${Data["GlorepUserDetails"]["AddUserGroups"]}
     Set Global Variable  ${GlorepAddUserGroupsDetails}
+
+Get New Currency Details
+    ${GlorepCurrencyDetails}=   Set Variable  ${Data["GlorepCurrencyVATExchangeRateDetails"]["AddCurrencyDetails"]}
+    Set Global Variable  ${GlorepCurrencyDetails}
+
+Get New VAT Details
+    ${GlorepVATDetails}=   Set Variable  ${Data["GlorepCurrencyVATExchangeRateDetails"]["AddVATDetails"]}
+    Set Global Variable  ${GlorepVATDetails}
+
+Get New Exchange Rate Details
+    ${GlorepExchangeRateDetails}=   Set Variable  ${Data["GlorepCurrencyVATExchangeRateDetails"]["AddExchangeRateDetails"]}
+    Set Global Variable  ${GlorepExchangeRateDetails}
+
+Get Existing Currency Details
+    ${GlorepEditCurrencyDetails}=   Set Variable  ${Data["GlorepCurrencyVATExchangeRateDetails"]["EditCurrencyDetails"]}
+    Set Global Variable  ${GlorepEditCurrencyDetails}
+
+Get Existing VAT Details
+    ${GlorepEditVATDetails}=   Set Variable  ${Data["GlorepCurrencyVATExchangeRateDetails"]["EditVATDetails"]}
+    Set Global Variable  ${GlorepEditVATDetails}
+
+Get Existing Exchange Rate Details
+    ${GlorepEditExchangeRateDetails}=   Set Variable  ${Data["GlorepCurrencyVATExchangeRateDetails"]["EditExchangeRateDetails"]}
+    Set Global Variable  ${GlorepEditExchangeRateDetails}
