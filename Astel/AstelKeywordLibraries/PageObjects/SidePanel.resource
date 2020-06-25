@@ -22,6 +22,8 @@ ${Configuration_Groups}                         xpath = //span[contains(text(),'
 ${Service_User_Management_Page}                 xpath = //strong[contains(text(),'Service Provider User Management')]
 ${Search_Bar}                                   xpath = //input[@class='form-control form-control-sm']
 
+${Admin_Assign_Solutions}                       xpath = //span[contains(text(),'Assign Solutions')]
+
 *** Keywords ***
 # Input GloRep Login Email Address
 #     [Arguments] 	${Email_Value}
@@ -78,4 +80,8 @@ Search for Item
 
 Click Configuration Group Item
     Click Element       ${Configuration_Groups}
+    Capture Page Screenshot
+
+Click on Assign Solution Item
+    Click Element       ${Admin_Assign_Solutions}
     Capture Page Screenshot

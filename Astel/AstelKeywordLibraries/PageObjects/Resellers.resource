@@ -19,6 +19,13 @@ ${Reseller_PopUp_Packages}              xpath = //strong[contains(text(),'Assign
 ${Reseller_PopUp_Edit}                  xpath = //strong[contains(text(),'EditReseller')]
 ${Reseller_PopUp_Add}                   xpath = //strong[contains(text(),'Add Reseller')]
 
+# Add Package to Reseller
+${Reseller_Add_Package}                 xpath = //a[@id='assignPackageId']
+${Reseller_Search_Package}              xpath = //label[contains(text(),'Search:')]//input
+${Reseller_Search_Reseller_Code}        xpath = //input[@class='select2-search__field']
+${Reseller_Add_Package_To_Reseller}     xpath = //a[@id='AssignPackageBtn']
+
+
 # Add/Edit Reseller Pop up 
 ${Reseller_Code}                        xpath = //input[@id='ResellerCode']
 ${Reseller_Username}                    xpath = //input[@id='Username']
@@ -175,10 +182,30 @@ Click on View Reseller Packages
     Click Element     ${View_Packages}
     Capture Page Screenshot
 
+Click on Add Reseller Packages
+    Click Element     ${Reseller_Add_Package}
+    Capture Page Screenshot
+
+Click on Add Package to Reseller
+    Click Element      ${Reseller_Add_Package_To_Reseller}
+    Capture Page Screenshot
+
 Search for Reseller
     [Arguments]    ${Element_Value}
     Input text     ${Search_Reseller}     ${Element_Value}
     Capture Page Screenshot 
+
+Search for Reseller in Add Packages
+    [Arguments]    ${Element_Value}
+    Click Element   ${Reseller_Search_Reseller_Code} 
+    Input text     ${Reseller_Search_Reseller_Code}     ${Element_Value}
+    Press Keys     ${Reseller_Search_Reseller_Code}     ENTER
+    Capture Page Screenshot 
+
+Search for Packages 
+    [Arguments]    ${Element_Value}
+    Input Text      ${Reseller_Search_Package}      ${Element_Value}
+    Capture Page Screenshot
 
 Validate Reseller Updated Landline Number
     [Arguments]     ${VerifyValue}

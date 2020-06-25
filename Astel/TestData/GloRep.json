@@ -81,7 +81,14 @@
                 "Glorep_Mobile_Number":"0825556666",
                 "Glorep_Landline_Number":"0315631111"
             }
-        ]
+        ],
+        "AddPackageToReseller":
+        [
+            {
+                "Glorep_Code":"MRsEx1",
+                "Glorep_Package":"GMS2 SharePoint Online (Plan 1)-Monthly"
+            }
+        ] 
     },
     "ResellerCreateCustomer":
     {
