@@ -48,7 +48,7 @@ Click Create Service User Management Menu Item
 
 Validate Service User Management Page
 	Page should contain Element		${Service_User_Management_Page}
-	Capture Page Screenshot  
+	Capture Page Screenshot
 
 Click Create User Menu Item
     Click Element       ${User_Management}
@@ -73,4 +73,4 @@ Click Configuration Exchange Rate Item
 Search for Item
     [Arguments]    ${Element_Value}
     Input text     ${Search_Bar}     ${Element_Value}
-    Capture Page Screenshot 
+    Capture Page Screenshot

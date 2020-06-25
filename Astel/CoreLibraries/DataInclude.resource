@@ -45,6 +45,15 @@ Get GloRep Reseller Customer data
     ${GlorepResellerCustomerData}=  Set Variable  ${Data["ResellerCreateCustomer"]["CreateCustomer"]}
     Set Global Variable  ${GlorepResellerCustomerData}
 
+#Quote Data
+Get GloRep Quote Customer data
+    ${GlorepQuoteData}=  Set Variable  ${Data["Quote"]["NewCustomer"]}
+    Set Global Variable  ${GlorepQuoteData}
+
+Get GloRep Quote Existing Customer data
+    ${GlorepQuoteExistingData}=  Set Variable  ${Data["Quote"]["ExistingCustomer"]}
+    Set Global Variable  ${GlorepQuoteExistingData}
+
 #Admin User Data
 Get GloRep Add Admin User data
     ${GlorepAddAdminUserDetails}=  Set Variable  ${Data["GlorepAdminUserDetails"]["AddNewAdminUser"]}

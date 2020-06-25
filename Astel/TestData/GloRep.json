@@ -90,6 +90,7 @@
             {
                 "CustType":"Consumer",
                 "CustTitle":"Miss",
+                "CustDomain":"LydiaExpleo",
                 "CustIDNum":"1234567891025",
                 "CustStatus":"Active",
                 "CustEmail":"Lydia@hotmail.com",
@@ -122,6 +123,72 @@
             }
         ]
             
+    },
+    "Quote":
+    {
+        "NewCustomer":
+        [
+            {
+                "QuoteSearch":"GR Visio Plan 2 for faculty-Monthly",
+                "CustType":"Consumer",
+                "CustTitle":"Miss",
+                "Domain":"ExpleoDomain7",
+                "CustIDNum":"1234567891025",
+                "CustStatus":"Active",
+                "CustEmail":"Holly@hotmail.com",
+                "CustMobile":"12345678900",
+                "CustLandline":"1234567890",
+                "CustAddressLine1":"5120",
+                "CustAddressLine2":"ABC Street",
+                "CustAddressLine3":"Durban",
+                "CustAddressLine4":"KZN",
+                "CustPostalCode":"5000",
+                "CustPrefferedCurrency":"Rands",
+                "CustRegion":"Not Applicable",
+                "CustPrefferedLanguage":"English",
+                "CustPaymentType":"Cash/EFT",
+                "Vat":"VAT @ 15%",
+                "DeliveryMethod":"Email",
+                "Classification":"Normal",
+                "Remarks":"Test Remarks",
+                "JobTitle":"Tester",
+                "FunctionArea":"IT",
+                "FirstName":"Holly",
+                "LastName":"Holly",
+                "Birthday":"27/04/1990",
+                "Mobile":"01425836947",
+                "Office":"0142582297",
+                "Email":"Holly@hotmail.com",
+                "Comments":"Test Comments",
+                "SAFirstName":"Holly",
+                "SALastName":"Holly",
+                "SAEmail":"Holly@hotmail.com",
+                "SAAgreementDate":"23/06/2020",
+                "BillCycle":"Reseller Bill Cycle",
+                "ContractStartDate":"23/06/2020",
+                "ContractEndDate":"23/06/2022",
+                "FriendlyName":"Holly",
+                "ResourceGroup":"Holly"
+            }
+        ],
+        "ExistingCustomer":
+        [
+            {
+                "QuoteSearch":"GR Visio Plan 2 for faculty-Monthly",
+                "CustomerSearch":"Lydia Barker",
+                "SAFirstName":"Lydia",
+                "SALastName":"Lydia",
+                "SAEmail":"Lydia@hotmail.com",
+                "SAAgreementDate":"23/06/2020",
+                "BillCycle":"Reseller Bill Cycle",
+                "ContractStartDate":"23/06/2020",
+                "ContractEndDate":"23/06/2022",
+                "FriendlyName":"Lydia",
+                "ResourceGroup":"Lydia"
+
+            }
+        ]
+
     },
     "GlorepAdminUserDetails":
     {
@@ -158,7 +225,7 @@
         [
             {
                 "Glorep_Username":"UserReseller@astel.co.za",
-                "Glorep_Password":"Bill#777187",    
+                "Glorep_Password":"Bill#777187",
                 "Glorep_FirstName":"AutoMationResellerUserTester",
                 "Glorep_Lastname":"ExpleoTester",
                 "Glorep_Job_Title":"Automation Reseller User Tester",
