@@ -236,7 +236,8 @@
         [
             {
                 "Glorep_ExRate_Base_Currency":"Rands",
-                "Glorep_ExRate_To_Rate":"8"
+                "Glorep_ExRate_To_Rate":"8",
+                "Glorep_ExRate_Description":"Rands to Pula"
             }
         ]
     }
