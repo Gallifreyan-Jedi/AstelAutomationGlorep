@@ -27,20 +27,32 @@ Test Teardown  Terminate Application Under Test
 #     Set Selenium Speed    0.2
 #     Edit Existing VAT
 
-Test Create Exchange Rate
-    [Documentation]  Verify that the GloRep Application allows existing users to Add Exchange Rate
-    Set Selenium Speed    0.2
-    Create New ExRate
+# Test Create Exchange Rate
+#     [Documentation]  Verify that the GloRep Application allows existing users to Add Exchange Rate
+#     Set Selenium Speed    0.2
+#     Create New ExRate
 
 # Test Editing Exchange Rate 
 #     [Documentation]  Verify that the GloRep Application allows existing users to edit Exchange Rate
 #     Set Selenium Speed    0.2
 #     Edit Existing ExRate
 
-# Test Creating Group
+Test Creating Group
+    [Documentation]  Verify that the GloRep Application allows existing users to Create Groups
+    Set Selenium Speed    0.2
+    Create New Groups
 
-# Test Creating Subgroup
+Test Creating Subgroup
+    [Documentation]  Verify that the GloRep Application allows existing users to Create Subgroups
+    Set Selenium Speed    0.2
+    Create New Subgroups
 
-# Test Creating Group Roles
+Test Creating Group Roles
+    [Documentation]  Verify that the GloRep Application allows existing users to Create Group Roles
+    Set Selenium Speed    0.2
+    Create New Roles
 
-# Test Deleting Group
+Test Deleting Group
+    [Documentation]  Verify that the GloRep Application allows existing users to Delete Groups
+    Set Selenium Speed    0.2
+    Create New Roles

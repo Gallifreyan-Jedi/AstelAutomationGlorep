@@ -2,6 +2,7 @@
 Documentation  Define Common keywords that are linked to Configuration on the GloRep Application
 
 *** Keywords ***
+#---Currency Scenarios---
 Create New Currency
     Get GloRep Reseller Login User data         
     Get New Currency Details
@@ -36,7 +37,7 @@ Edit Existing Currency
     \  Click Edit Currency
     \  Validate Currency Updated        ${Item["Glorep_Currency_Description"]}
 
-# --------------------------------------------------------------------------------------------
+#---VAT Scenarios---
 Create New VAT
     Get GloRep Reseller Login User data         
     Get New VAT Details
@@ -70,7 +71,7 @@ Edit Existing VAT
     \  Search for Item      ${Item["Glorep_VAT_Code"]}
     \  Click Edit VAT
     \  Validate VAT Updated        ${Item["Glorep_VAT_Value"]}
-#-----------------------------------------------------------------------------------------------------
+#---Exchange Rate Scenarios---
 Create New ExRate
     Get GloRep Reseller Login User data         
     Get New Exchange Rate Details
@@ -105,3 +106,57 @@ Edit Existing ExRate
     \  Search for Item      ${Item["Glorep_ExRate_Description"]}
     \  Click Edit ExRate
     \  Validate ExRate Updated        ${Item["Glorep_ExRate_Description"]}
+
+#---Groups Scenarios---
+Create New Groups
+    Get GloRep Reseller Login User data         
+    Get Config Groups Details
+    Login as Reseller
+    Click Side Configuration Menu Item
+    Click Configuration Group Item
+    :FOR  ${Item}  IN  @{GlorepGroupsDetails}   
+    \  Click Add New Group      
+    \  Input Add Group Name      ${Item["Glorep_Groups_Name"]} 
+    \  Click Submit Groups
+    \  Search for Item      ${Item["Glorep_Groups_Name"]} 
+    \  Validate Group Created        ${Item["Glorep_Groups_Name"]}
+
+Create New Subgroups
+    Get GloRep Reseller Login User data         
+    Get Config Groups Details
+    Login as Reseller
+    Click Side Configuration Menu Item
+    Click Configuration Group Item
+    :FOR  ${Item}  IN  @{GlorepGroupsDetails}   
+    \  Search for Item    ${Item["Glorep_Groups_Name"]} 
+    \  Click Groups Action Dropdown
+    \  Click Group Subgroups
+    \  Select Subgroups     ${Item["Glorep_Groups_Subgroup_Item"]}
+    \  Click Add Selected Subgroup
+    \  Validate Subgroup Added        ${Item["Glorep_Groups_Subgroup_Item"]}
+
+Create New Roles
+    Get GloRep Reseller Login User data         
+    Get Config Groups Details
+    Login as Reseller
+    Click Side Configuration Menu Item
+    Click Configuration Group Item
+    :FOR  ${Item}  IN  @{GlorepGroupsDetails}   
+    \  Search for Item    ${Item["Glorep_Groups_Name"]} 
+    \  Click Groups Action Dropdown
+    \  Click Group Roles
+    \  Select Roles     ${Item["Glorep_Groups_Role_Item"]}
+    \  Click Add Selected Role
+    \  Validate Role Added        ${Item["Glorep_Groups_Role_Item_Check"]}
+
+Delete Group
+    Get GloRep Reseller Login User data         
+    Get Config Groups Details
+    Login as Reseller
+    Click Side Configuration Menu Item
+    Click Configuration Group Item
+    :FOR  ${Item}  IN  @{GlorepGroupsDetails}   
+    \  Search for Item    ${Item["Glorep_Groups_Name"]} 
+    \  Click Groups Action Dropdown
+    \  Click Delete Group 
+    # Add validation of delete once defect resolved.

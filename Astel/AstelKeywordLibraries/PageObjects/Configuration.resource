@@ -36,12 +36,39 @@ ${ExRate_Status_Value}              dummy
 ${ExRate_Status}                    xpath = //select[@id='Status']
 ${ExRate_Status_Chosen}             xpath = //option[contains(text(),'${ExRate_Status_Value}')]
 ${ExRate_Base_Currency}             xpath = //span[@id='select2-BaseCurrency-container']
-${ExRate_Currency_Input}            xpath = //input[@class='select2-search__field']
+${ExRate_Currency_Input}            xpath = //html//body//span//span//span//input
 ${ExRate_To_Currency}               xpath = //span[@id='select2-ToCurrency-container']
 ${ExRate_Description}               xpath = //input[@id='ExchangeRateDescription']
 ${ExRate_To_Rate}                   xpath = //input[@id='ToRate']
 
+${Groups_Search_Bar}                xpath = //input[@placeholder='Search']
+${Groups_Add}                       xpath = //button[@id='AddGroup']
+${Groups_Add_Name}                  xpath = //input[@id='GroupName']
+${Groups_Name_Value}                xpath = dummy
+${Groups_Name_Check}                xpath = //td[contains(text(),'${Groups_Name_Value}')]
+
+${Groups_Action_Dropdown}           xpath = //a[@class='btn btn-outline-primary dropdown-toggle']
+
+${Groups_Add_Subgroups}             xpath = //a[@class='dropdown-item groupSubgroups']
+${Groups_Subgroups_Value}           dummy
+${Groups_Subgroups}                 xpath = //select[@id='ddlSubgroupName']
+${Groups_Subgroups_Chosen}          xpath = //option[contains(text(),'${Groups_Subgroups_Value}')]
+${Groups_Subgroups_Selected}        xpath = //button[@id='AddGroupSubgroup']
+${Groups_Subgroups_Check}           xpath = //td[contains(text(),'Groups_Subgroups_Value')]
+${Groups_Subgroups_Search}          xpath = //div[@id='GroupSubgroupTable_filter']//input[@class='form-control form-control-sm']
+
+${Groups_Add_Roles}                 xpath = //a[@class='dropdown-item groupRoles']
+${Groups_Roles_Value}               dummy
+${Groups_Roles}                     xpath = //select[@id='ddlRoleName']
+${Groups_Roles_Chosen}              xpath = //option[contains(text(),'${Groups_Roles_Value}')]
+${Groups_Roles_Selected}            xpath = //button[@id='AddGroupRole']
+${Groups_Roles_Check}               xpath = //td[contains(text(),'${Groups_Roles_Value}')]
+${Groups_Roles_Search}              xpath = //div[@id='GroupRoleTable_filter']//input
+
+${Groups_Delete_Group}              xpath = //a[@class='dropdown-item deleteGroup']
+
 *** Keywords ***
+#---Currency Action keywords---
 Click Add New Currency
     Click Element	       ${Add_Currency}          
     Capture Page Screenshot
@@ -89,7 +116,7 @@ Validate Currency Updated
     [Arguments]     ${VerifyValue}
     Textfield Value Should Be     ${Currency_Description}       ${VerifyValue}
 
-# ------------------------------------------------------------------------------------------------
+#---VAT Action Keywords---
 Click Add New VAT
     Click Element	       ${Add_VAT}          
     Capture Page Screenshot
@@ -139,7 +166,7 @@ Validate VAT Updated
     [Arguments]     ${VerifyValue}
     Textfield Value Should Be     ${VAT_Value}       ${VerifyValue}
 
-# -------------------------------------------------
+#---Exchange Rate Action Keywords---
 Input Add ExRate Description
     [Arguments]         ${Element_Value}
     Clear Element Text      ${ExRate_Description}
@@ -165,7 +192,8 @@ Input Add ExRate End Date
 Input Add ExRate Base Currency
     [Arguments]         ${Element_Value}
     Click Element       ${ExRate_Base_Currency}
-    Click Element       ${ExRate_Currency_Input}
+    # Set Focus To Element     ${ExRate_Currency_Input}
+    # Fix this focus error
     Input Text          ${ExRate_Currency_Input}        ${Element_Value}
     Capture Page Screenshot
 
@@ -196,3 +224,71 @@ Select ExRate Status
 Validate ExRate Updated
     [Arguments]     ${VerifyValue}
     Textfield Value Should Be     ${ExRate_To_Rate}       ${VerifyValue}
+
+#---Groups Action Keywords---
+Click Add New Group
+    Click Element	       ${Groups_Add}          
+    Capture Page Screenshot
+
+Input Add Group Name
+    [Arguments]         ${Element_Value}
+    Input Text	       ${Groups_Add_Name}         ${Element_Value}
+    Capture Page Screenshot
+
+Click Submit Groups
+    Click Element       ${Submit_Currency}
+    Capture Page Screenshot
+
+Validate Group Created
+    [Arguments]     ${Groups_Name_Value}
+    Page should Contain Element    ${Groups_Name_Check}
+
+Click Groups Action Dropdown
+    Click Element       ${Groups_Action_Dropdown}
+    Capture Page Screenshot
+
+Click Group Subgroups
+    Click Element       ${Groups_Add_Subgroups}
+    Capture Page Screenshot
+
+Select Subgroups
+    [Arguments]         ${Groups_Subgroups_Value}
+    Click Element       ${Groups_Subgroups}
+    Scroll Element Into View        ${Groups_Subgroups_Chosen}
+    Click Element       ${Groups_Subgroups_Chosen}
+    Capture Page Screenshot 
+
+Click Add Selected Subgroup
+    Click Element       ${Groups_Subgroups_Selected}
+    Capture Page Screenshot
+
+Validate Subgroup Added
+    [Arguments]     ${Groups_Subgroups_Value}
+    Input Text      ${Groups_Subgroups_Search}      ${Groups_Subgroups_Value}
+    Page should Contain Element    ${Groups_Subgroups_Chosen}
+    Capture Page Screenshot
+
+Click Group Roles
+    Click Element       ${Groups_Add_Roles}
+    Capture Page Screenshot
+
+Select Roles
+    [Arguments]         ${Groups_Roles_Value}
+    Click Element       ${Groups_Roles}
+    Scroll Element Into View        ${Groups_Roles_Chosen}
+    Click Element       ${Groups_Roles_Chosen}
+    Capture Page Screenshot 
+
+Click Add Selected Role
+    Click Element       ${Groups_Roles_Selected}
+    Capture Page Screenshot
+
+Validate Role Added
+    [Arguments]     ${Groups_Roles_Value}
+    Input Text      ${Groups_Roles_Search}      ${Groups_Roles_Value}
+    Page should Contain Element    ${Groups_Roles_Chosen}
+    Capture Page Screenshot
+
+Click Delete Group
+    Click Element       ${Groups_Delete_Group}
+    Capture Page Screenshot

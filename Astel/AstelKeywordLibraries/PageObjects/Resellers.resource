@@ -14,7 +14,6 @@ ${LoginAsReseller}                      xpath = //a[@id='Login']
 ${LoginAsResellerValue}                 dummy
 ${LoginAsResellerValidate}              xpath = //span[contains(text(),'You are currently logged in as reseller : ${LoginAsResellerValue}')]
 
-
 # Popup Validation
 ${Reseller_PopUp_Packages}              xpath = //strong[contains(text(),'Assigned Packages')]
 ${Reseller_PopUp_Edit}                  xpath = //strong[contains(text(),'EditReseller')]

@@ -17,9 +17,10 @@ ${Configuration_Menu_Item}                      xpath = //a[@id='Configuration']
 ${Configuration_Exchange_Rate}                  xpath = //span[contains(text(),'Exchange Rate')]
 ${Configuration_VAT}                            xpath = //span[contains(text(),'VAT')]
 ${Configuration_Currency}                       xpath = //span[contains(text(),'Currency')]
+${Configuration_Groups}                         xpath = //span[contains(text(),'Groups')]
 
 ${Service_User_Management_Page}                 xpath = //strong[contains(text(),'Service Provider User Management')]
-${Search_Bar}                                    xpath = //input[@class='form-control form-control-sm']
+${Search_Bar}                                   xpath = //input[@class='form-control form-control-sm']
 
 *** Keywords ***
 # Input GloRep Login Email Address
@@ -73,4 +74,8 @@ Click Configuration Exchange Rate Item
 Search for Item
     [Arguments]    ${Element_Value}
     Input text     ${Search_Bar}     ${Element_Value}
+    Capture Page Screenshot
+
+Click Configuration Group Item
+    Click Element       ${Configuration_Groups}
     Capture Page Screenshot

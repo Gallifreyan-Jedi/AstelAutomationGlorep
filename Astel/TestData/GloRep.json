@@ -307,5 +307,17 @@
                 "Glorep_ExRate_Description":"Rands to Pula"
             }
         ]
+    },
+    "GlorepGroupsDetails":
+    {
+        "AddNewGroup":
+        [
+            {
+                "Glorep_Groups_Name":"Automation Test New Group",
+                "Glorep_Groups_Subgroup_Item":"View Customer",
+                "Glorep_Groups_Role_Item":"Edit Customer",
+                "Glorep_Groups_Role_Item_Check":"EditCustomer"
+            }
+        ]
     }
 }

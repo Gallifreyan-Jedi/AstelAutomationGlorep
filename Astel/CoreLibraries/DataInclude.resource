@@ -103,3 +103,7 @@ Get Existing VAT Details
 Get Existing Exchange Rate Details
     ${GlorepEditExchangeRateDetails}=   Set Variable  ${Data["GlorepCurrencyVATExchangeRateDetails"]["EditExchangeRateDetails"]}
     Set Global Variable  ${GlorepEditExchangeRateDetails}
+
+Get Config Groups Details
+    ${GlorepGroupsDetails}=     Set Variable    ${Data["GlorepGroupsDetails"]["AddNewGroup"]}
+    Set Global Variable     ${GlorepGroupsDetails}
