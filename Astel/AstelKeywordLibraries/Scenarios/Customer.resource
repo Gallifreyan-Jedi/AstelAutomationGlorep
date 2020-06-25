@@ -11,6 +11,7 @@ Create Customer
     \  Click Create customer Menu Item
     \  Select Customer Type                     ${Item["CustType"]}
     \  Select Customer Title                    ${Item["CustTitle"]}
+    \  Input Customer Domain                    ${Item["CustDomain"]}
     \  Input Customer IDNumber                  ${Item["CustIDNum"]}
     \  Select Customer Status                   ${Item["CustStatus"]}
     \  Input Customer Email                     ${Item["CustEmail"]}

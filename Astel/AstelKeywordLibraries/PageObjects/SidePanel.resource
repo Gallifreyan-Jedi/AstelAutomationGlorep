@@ -9,6 +9,9 @@ ${CustomerMenuReseller}             xpath = //span[contains(text(),'Customers')]
 ${CustomerCreateMenuReseller}       xpath = //a[contains(text(),'Create Customer')]
 ${ViewCustomerMenuReseller}         xpath = //a[contains(text(),'View Customers')]
 
+${Quote}                            xpath = //span[contains(text(),'Quotes')]
+${CreateQuote}                      xpath = //a[contains(text(),'New Quote')]
+
 *** Keywords ***
 # Input GloRep Login Email Address
 #     [Arguments] 	${Email_Value}
@@ -26,3 +29,11 @@ Click Create customer Menu Item
 Click View Customer Menu
     Click Element       ${ViewCustomerMenuReseller}  
     Capture Page Screenshot 
+
+Click Quote Menu Item 
+    Click Element       ${Quote}
+    Capture Page Screenshot
+
+Click Create Quote Menu Item 
+    Click Element       ${CreateQuote}
+    Capture Page Screenshot
