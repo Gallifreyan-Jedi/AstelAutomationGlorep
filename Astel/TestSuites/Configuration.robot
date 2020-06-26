@@ -55,4 +55,4 @@ Test Creating Group Roles
 Test Deleting Group
     [Documentation]  Verify that the GloRep Application allows existing users to Delete Groups
     Set Selenium Speed    0.2
-    Create New Roles
+    Delete Group
