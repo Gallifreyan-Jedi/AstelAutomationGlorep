@@ -54,3 +54,14 @@ View Reseller Packages
     \  Search for Reseller  ${Item["Glorep_Code"]} 
     \  Click on View Reseller Packages    
     \  Validate Reseller View Packages PopUp
+
+Add Reseller Packages
+    Get GloRep Reseller Packages data  
+    Login of an existing user 
+    Click on Assign Solution Item
+    :FOR  ${Item}  IN  @{GlorepResellerPackagesDetails}
+    \  Search for Packages   ${Item["Glorep_Package"]} 
+    \  Click on Add Reseller Packages
+    \  Search for Reseller in Add Packages   ${Item["Glorep_Code"]} 
+    \  Click on Add Package to Reseller
+    # \  Validate Reseller View Packages PopUp

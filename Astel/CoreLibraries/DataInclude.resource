@@ -40,6 +40,10 @@ Get GloRep Edit Reseller data
     ${GlorepEditResellerDetails}=  Set Variable  ${Data["GlorepResellerDetails"]["EditReseller"]}
     Set Global Variable  ${GlorepEditResellerDetails}
 
+Get GloRep Reseller Packages data
+    ${GlorepResellerPackagesDetails}=  Set Variable  ${Data["GlorepResellerDetails"]["AddPackageToReseller"]}
+    Set Global Variable  ${GlorepResellerPackagesDetails}
+
 #Customer Data
 Get GloRep Reseller Customer data
     ${GlorepResellerCustomerData}=  Set Variable  ${Data["ResellerCreateCustomer"]["CreateCustomer"]}
@@ -53,3 +57,57 @@ Get GloRep Quote Customer data
 Get GloRep Quote Existing Customer data
     ${GlorepQuoteExistingData}=  Set Variable  ${Data["Quote"]["ExistingCustomer"]}
     Set Global Variable  ${GlorepQuoteExistingData}
+
+#Admin User Data
+Get GloRep Add Admin User data
+    ${GlorepAddAdminUserDetails}=  Set Variable  ${Data["GlorepAdminUserDetails"]["AddNewAdminUser"]}
+    Set Global Variable  ${GlorepAddAdminUserDetails}
+
+Get GloRep Edit Admin User data
+    ${GlorepEditAdminUserDetails}=  Set Variable  ${Data["GlorepAdminUserDetails"]["EditAdminUser"]}
+    Set Global Variable  ${GlorepEditAdminUserDetails}
+
+#User Data
+Get GloRep Reseller Login User data
+    ${GlorepLoginUserDetails}=  Set Variable  ${Data["GlorepUserDetails"]["ExistingUser"]}
+    Set Global Variable  ${GlorepLoginUserDetails}
+
+Get GloRep Add User data
+    ${GlorepAddUserDetails}=  Set Variable  ${Data["GlorepUserDetails"]["AddNewUser"]}
+    Set Global Variable  ${GlorepAddUserDetails}
+
+Get GloRep Edit User data
+    ${GlorepEditUserDetails}=  Set Variable  ${Data["GlorepUserDetails"]["EditUser"]}
+    Set Global Variable  ${GlorepEditUserDetails}
+
+Get GloRep Add User Groups data
+    ${GlorepAddUserGroupsDetails}=  Set Variable  ${Data["GlorepUserDetails"]["AddUserGroups"]}
+    Set Global Variable  ${GlorepAddUserGroupsDetails}
+
+Get New Currency Details
+    ${GlorepCurrencyDetails}=   Set Variable  ${Data["GlorepCurrencyVATExchangeRateDetails"]["AddCurrencyDetails"]}
+    Set Global Variable  ${GlorepCurrencyDetails}
+
+Get New VAT Details
+    ${GlorepVATDetails}=   Set Variable  ${Data["GlorepCurrencyVATExchangeRateDetails"]["AddVATDetails"]}
+    Set Global Variable  ${GlorepVATDetails}
+
+Get New Exchange Rate Details
+    ${GlorepExchangeRateDetails}=   Set Variable  ${Data["GlorepCurrencyVATExchangeRateDetails"]["AddExchangeRateDetails"]}
+    Set Global Variable  ${GlorepExchangeRateDetails}
+
+Get Existing Currency Details
+    ${GlorepEditCurrencyDetails}=   Set Variable  ${Data["GlorepCurrencyVATExchangeRateDetails"]["EditCurrencyDetails"]}
+    Set Global Variable  ${GlorepEditCurrencyDetails}
+
+Get Existing VAT Details
+    ${GlorepEditVATDetails}=   Set Variable  ${Data["GlorepCurrencyVATExchangeRateDetails"]["EditVATDetails"]}
+    Set Global Variable  ${GlorepEditVATDetails}
+
+Get Existing Exchange Rate Details
+    ${GlorepEditExchangeRateDetails}=   Set Variable  ${Data["GlorepCurrencyVATExchangeRateDetails"]["EditExchangeRateDetails"]}
+    Set Global Variable  ${GlorepEditExchangeRateDetails}
+
+Get Config Groups Details
+    ${GlorepGroupsDetails}=     Set Variable    ${Data["GlorepGroupsDetails"]["AddNewGroup"]}
+    Set Global Variable     ${GlorepGroupsDetails}

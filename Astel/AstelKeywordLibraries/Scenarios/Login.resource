@@ -48,3 +48,12 @@ Login as Reseller
     \  Sleep   5s
     \  Click GloRep Login Button 
     \  Validate Succesful Login
+
+Login of an existing Reseller user
+    [Documentation]  Excecute the steps to login with correct existing user credentials
+    Get GloRep Valid Login data
+    :FOR  ${Item}  IN  @{GloRepLoginInformation}
+    \  Input GloRep Login Email Address  ${Item["Login_Email"]}
+    \  Input GloRep Login Password  ${Item["Login_Password"]}
+    \  Click GloRep Login Button 
+    \  Validate Succesful Login
