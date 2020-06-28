@@ -1,0 +1,2407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200628 15:45:33.354" generator="Robot 3.2 (Python 2.7.17 on linux2)">
+<suite source="/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/TestSuites/Reseller.robot" id="s1" name="Reseller">
+<test id="s1-t1" name="Test Creating a Reseller User">
+<kw type="setup" name="Launch Application Under Test" library="Common">
+<doc>Opens the Globill application in the &lt;BROWSER&gt; specified in run command or data repository</doc>
+<kw name="Import Test Data" library="DataInclude">
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../TestData/${SITENAME}.json</arg>
+</arguments>
+<assign>
+<var>${jsonfile}</var>
+</assign>
+<msg timestamp="20200628 15:45:33.595" html="yes" level="INFO">Getting file '&lt;a href="file:///home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/TestData/GloRep.json"&gt;/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/TestData/GloRep.json&lt;/a&gt;'.</msg>
+<msg timestamp="20200628 15:45:33.596" level="INFO">${jsonfile} = {
+    "setup":
+    {
+        "SITENAME":"GloRep",
+        "BROWSER":"chrome",
+        "WEBURL":"http://astelqa-za.southafricanorth.cloudapp.azure.com/GloRep.V20.1/"
+    },
+
+    "GloRep_Login":
+    {
+ ...</msg>
+<status status="PASS" endtime="20200628 15:45:33.596" starttime="20200628 15:45:33.595"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>json.loads('''${jsonfile}''')</arg>
+<arg>json</arg>
+</arguments>
+<assign>
+<var>${Data}</var>
+</assign>
+<msg timestamp="20200628 15:45:33.598" level="INFO">${Data} = {u'GlorepCurrencyVATExchangeRateDetails': {u'AddCurrencyDetails': [{u'Glorep_Currency_Description': u'GHS Cedi', u'Glorep_Currency_Symbol': u'C', u'Glorep_Currency_Override_Format': u'', u'Glorep_Curr...</msg>
+<status status="PASS" endtime="20200628 15:45:33.598" starttime="20200628 15:45:33.596"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Data}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:33.599" level="INFO">${Data} = {u'GlorepCurrencyVATExchangeRateDetails': {u'AddCurrencyDetails': [{u'Glorep_Currency_Description': u'GHS Cedi', u'Glorep_Currency_Symbol': u'C', u'Glorep_Currency_Override_Format': u'', u'Glorep_Curr...</msg>
+<status status="PASS" endtime="20200628 15:45:33.599" starttime="20200628 15:45:33.598"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.599" starttime="20200628 15:45:33.594"></status>
+</kw>
+<kw name="Import Solution Keywords" library="ScenariosIncludeList">
+<kw name="Import Builtin Scenarios" library="ScenariosIncludeList">
+<kw name="Import Page Object Keywords" library="PageObjectIncludeList">
+<kw name="Import Builtin Page Objects" library="PageObjectIncludeList">
+<kw name="Return Builtin Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{FilesPO}</var>
+</assign>
+<msg timestamp="20200628 15:45:33.602" level="INFO">@{FilesPO} = [ SidePanel.resource | Configuration.resource | Quote.resource | Administration.resource | UserManagement.resource | Login.resource | Customer.resource | Resellers.resource ]</msg>
+<status status="PASS" endtime="20200628 15:45:33.602" starttime="20200628 15:45:33.601"></status>
+</kw>
+<kw type="for" name="${filePO} IN [ @{FilesPO} ]">
+<msg timestamp="20200628 15:45:33.603" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:33.603" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${filePO} = SidePanel.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.619" starttime="20200628 15:45:33.604"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.619" starttime="20200628 15:45:33.604"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Configuration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.669" starttime="20200628 15:45:33.619"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.669" starttime="20200628 15:45:33.619"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Quote.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.698" starttime="20200628 15:45:33.670"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.698" starttime="20200628 15:45:33.670"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Administration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.709" starttime="20200628 15:45:33.698"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.709" starttime="20200628 15:45:33.698"></status>
+</kw>
+<kw type="foritem" name="${filePO} = UserManagement.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.730" starttime="20200628 15:45:33.709"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.730" starttime="20200628 15:45:33.709"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Login.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.739" starttime="20200628 15:45:33.731"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.739" starttime="20200628 15:45:33.730"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Customer.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.786" starttime="20200628 15:45:33.740"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.786" starttime="20200628 15:45:33.739"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Resellers.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.831" starttime="20200628 15:45:33.786"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.831" starttime="20200628 15:45:33.786"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.831" starttime="20200628 15:45:33.603"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.831" starttime="20200628 15:45:33.601"></status>
+</kw>
+<kw name="Import Custom Page Objects" library="PageObjectIncludeList">
+<kw name="Return Custom Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{CustomFilesPO}</var>
+</assign>
+<msg timestamp="20200628 15:45:33.833" level="INFO">@{CustomFilesPO} = [ ]</msg>
+<status status="PASS" endtime="20200628 15:45:33.833" starttime="20200628 15:45:33.832"></status>
+</kw>
+<kw type="for" name="${cfilePO} IN [ @{CustomFilesPO} ]">
+<msg timestamp="20200628 15:45:33.833" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:33.833" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<status status="PASS" endtime="20200628 15:45:33.833" starttime="20200628 15:45:33.833"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.834" starttime="20200628 15:45:33.831"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.834" starttime="20200628 15:45:33.600"></status>
+</kw>
+<kw name="Return Builtin Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{FilesSC}</var>
+</assign>
+<msg timestamp="20200628 15:45:33.835" level="INFO">@{FilesSC} = [ Common.resource | Configuration.resource | Quote.resource | Administration.resource | UserManagement.resource | Login.resource | Customer.resource | Resellers.resource ]</msg>
+<status status="PASS" endtime="20200628 15:45:33.835" starttime="20200628 15:45:33.834"></status>
+</kw>
+<kw type="for" name="${fileSC} IN [ @{FilesSC} ]">
+<msg timestamp="20200628 15:45:33.835" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:33.835" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${fileSC} = Common.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.837" starttime="20200628 15:45:33.836"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.837" starttime="20200628 15:45:33.836"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Configuration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.855" starttime="20200628 15:45:33.838"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.855" starttime="20200628 15:45:33.838"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Quote.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.869" starttime="20200628 15:45:33.855"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.869" starttime="20200628 15:45:33.855"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Administration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.875" starttime="20200628 15:45:33.870"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.875" starttime="20200628 15:45:33.869"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = UserManagement.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.889" starttime="20200628 15:45:33.876"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.890" starttime="20200628 15:45:33.875"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Login.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.903" starttime="20200628 15:45:33.890"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.904" starttime="20200628 15:45:33.890"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Customer.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.917" starttime="20200628 15:45:33.904"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.917" starttime="20200628 15:45:33.904"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Resellers.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.926" starttime="20200628 15:45:33.918"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.926" starttime="20200628 15:45:33.918"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.926" starttime="20200628 15:45:33.835"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.926" starttime="20200628 15:45:33.600"></status>
+</kw>
+<kw name="Import Custom Scenarios" library="ScenariosIncludeList">
+<kw name="Return Custom Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{CustomFilesSC}</var>
+</assign>
+<msg timestamp="20200628 15:45:33.928" level="INFO">@{CustomFilesSC} = [ ]</msg>
+<status status="PASS" endtime="20200628 15:45:33.928" starttime="20200628 15:45:33.927"></status>
+</kw>
+<kw type="for" name="${cfileSC} IN [ @{CustomFilesSC} ]">
+<msg timestamp="20200628 15:45:33.928" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:33.928" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<status status="PASS" endtime="20200628 15:45:33.929" starttime="20200628 15:45:33.928"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.929" starttime="20200628 15:45:33.927"></status>
+</kw>
+<kw name="Set Lib Search Order" library="ScenariosIncludeList">
+<kw name="Set Lib Search Order for Page Objects" library="ScenariosIncludeList">
+<kw name="Return Custom Resource List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{LibsPO}</var>
+</assign>
+<msg timestamp="20200628 15:45:33.933" level="INFO">@{LibsPO} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:45:33.933" starttime="20200628 15:45:33.932"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>@{LibsPO}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:33.934" level="INFO">@{LibsPO} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:45:33.934" starttime="20200628 15:45:33.933"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.934" starttime="20200628 15:45:33.931"></status>
+</kw>
+<kw name="Set Lib Search Order for Scenarios" library="ScenariosIncludeList">
+<kw name="Return Custom Resource List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{LibsSC}</var>
+</assign>
+<msg timestamp="20200628 15:45:33.938" level="INFO">@{LibsSC} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:45:33.938" starttime="20200628 15:45:33.935"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>@{LibsSC}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:33.940" level="INFO">@{LibsSC} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:45:33.940" starttime="20200628 15:45:33.938"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.940" starttime="20200628 15:45:33.934"></status>
+</kw>
+<kw name="Combine Lists" library="Collections">
+<doc>Combines the given ``lists`` together and returns the result.</doc>
+<arguments>
+<arg>${LibsPO}</arg>
+<arg>${LibsSC}</arg>
+</arguments>
+<assign>
+<var>@{CombinedSearchOrder}</var>
+</assign>
+<msg timestamp="20200628 15:45:33.941" level="INFO">@{CombinedSearchOrder} = [ dummy | dummy ]</msg>
+<status status="PASS" endtime="20200628 15:45:33.942" starttime="20200628 15:45:33.941"></status>
+</kw>
+<kw name="Set Library Search Order" library="BuiltIn">
+<doc>Sets the resolution order to use when a name matches multiple keywords.</doc>
+<arguments>
+<arg>@{CombinedSearchOrder}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:33.942" starttime="20200628 15:45:33.942"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.943" starttime="20200628 15:45:33.930"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:33.944" starttime="20200628 15:45:33.600"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${Data["setup"]["WEBURL"]}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:33.949" level="INFO">Opening browser 'chrome' to base url 'http://astelqa-za.southafricanorth.cloudapp.azure.com/GloRep.V20.1/'.</msg>
+<status status="PASS" endtime="20200628 15:45:38.459" starttime="20200628 15:45:33.947"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20200628 15:45:38.564" starttime="20200628 15:45:38.460"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20200628 15:45:48.566" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20200628 15:45:48.567" starttime="20200628 15:45:38.564"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:48.567" starttime="20200628 15:45:33.594"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.2</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:48.568" starttime="20200628 15:45:48.567"></status>
+</kw>
+<kw name="Add New Reseller" library="Resellers">
+<kw name="Get GloRep Add Reseller data" library="DataInclude">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Data["GlorepResellerDetails"]["AddReseller"]}</arg>
+</arguments>
+<assign>
+<var>${GlorepAddResellerDetails}</var>
+</assign>
+<msg timestamp="20200628 15:45:48.570" level="INFO">${GlorepAddResellerDetails} = [{u'Glorep_Physical_Address_1': u'12 Ncondo Place', u'Glorep_Code': u'MRSEx12', u'Glorep_Title': u'Prof', u'Glorep_Lastname': u'ExpleoTester12', u'Glorep_Show_Storefront': u'Active', u'Glorep_Contact_...</msg>
+<status status="PASS" endtime="20200628 15:45:48.570" starttime="20200628 15:45:48.569"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${GlorepAddResellerDetails}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:48.572" level="INFO">${GlorepAddResellerDetails} = [{u'Glorep_Physical_Address_1': u'12 Ncondo Place', u'Glorep_Code': u'MRSEx12', u'Glorep_Title': u'Prof', u'Glorep_Lastname': u'ExpleoTester12', u'Glorep_Show_Storefront': u'Active', u'Glorep_Contact_...</msg>
+<status status="PASS" endtime="20200628 15:45:48.572" starttime="20200628 15:45:48.571"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:48.572" starttime="20200628 15:45:48.569"></status>
+</kw>
+<kw name="Login of an existing user" library="Login">
+<doc>Excecute the steps to login with correct existing user credentials</doc>
+<kw name="Get GloRep Valid Login data" library="DataInclude">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Data["GloRep_Login"]["ValidUserLogin"]}</arg>
+</arguments>
+<assign>
+<var>${GloRepLoginInformation}</var>
+</assign>
+<msg timestamp="20200628 15:45:48.576" level="INFO">${GloRepLoginInformation} = [{u'Login_Email': u'admin@astel.co.za', u'Login_Password': u'Bill#777187'}]</msg>
+<status status="PASS" endtime="20200628 15:45:48.576" starttime="20200628 15:45:48.573"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${GloRepLoginInformation}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:48.577" level="INFO">${GloRepLoginInformation} = [{u'Login_Email': u'admin@astel.co.za', u'Login_Password': u'Bill#777187'}]</msg>
+<status status="PASS" endtime="20200628 15:45:48.577" starttime="20200628 15:45:48.576"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:48.578" starttime="20200628 15:45:48.573"></status>
+</kw>
+<kw type="for" name="${Item} IN [ @{GloRepLoginInformation} ]">
+<msg timestamp="20200628 15:45:48.578" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:48.582" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${Item} = {u'Login_Email': u'admin@astel.co.za', u'Login_Password': u'Bill#777187'}">
+<kw name="Input GloRep Login Email Address" library="Login">
+<arguments>
+<arg>${Item["Login_Email"]}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Email}</arg>
+<arg>${Email_Value}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:48.586" level="INFO">Typing text 'admin@astel.co.za' into text field 'xpath = //*[@id="Email"]'.</msg>
+<status status="PASS" endtime="20200628 15:45:49.408" starttime="20200628 15:45:48.586"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:45:49.867" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-571.png"&gt;&lt;img src="selenium-screenshot-571.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:45:49.867" starttime="20200628 15:45:49.409"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:49.868" starttime="20200628 15:45:48.584"></status>
+</kw>
+<kw name="Input GloRep Login Password" library="Login">
+<arguments>
+<arg>${Item["Login_Password"]}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password}</arg>
+<arg>${Password_Value}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:49.869" level="INFO">Typing text 'Bill#777187' into text field 'xpath = //*[@id="Password"]'.</msg>
+<status status="PASS" endtime="20200628 15:45:50.613" starttime="20200628 15:45:49.869"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:45:51.068" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-572.png"&gt;&lt;img src="selenium-screenshot-572.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:45:51.068" starttime="20200628 15:45:50.613"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:51.068" starttime="20200628 15:45:49.868"></status>
+</kw>
+<kw name="Click GloRep Login Button" library="Login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:51.070" level="INFO">Clicking element 'xpath = //div[@id='mCSB_1_container']/div/form/div[3]/div/div/input'.</msg>
+<status status="PASS" endtime="20200628 15:45:53.263" starttime="20200628 15:45:51.070"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:45:53.887" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-573.png"&gt;&lt;img src="selenium-screenshot-573.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:45:53.887" starttime="20200628 15:45:53.264"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:53.887" starttime="20200628 15:45:51.069"></status>
+</kw>
+<kw name="Validate Succesful Login" library="Login">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:54.113" level="INFO">Current page contains element 'xpath = //div[@class='sidebar-menu']'.</msg>
+<status status="PASS" endtime="20200628 15:45:54.113" starttime="20200628 15:45:53.888"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:45:54.598" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-574.png"&gt;&lt;img src="selenium-screenshot-574.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:45:54.598" starttime="20200628 15:45:54.113"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:54.599" starttime="20200628 15:45:53.887"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:54.599" starttime="20200628 15:45:48.584"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:54.599" starttime="20200628 15:45:48.578"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:54.599" starttime="20200628 15:45:48.572"></status>
+</kw>
+<kw name="Click on Add new Reseller" library="Resellers">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Add_New_Reseller}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:54.600" level="INFO">Clicking element 'xpath = //a[@id='newReseller']'.</msg>
+<status status="PASS" endtime="20200628 15:45:55.140" starttime="20200628 15:45:54.600"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Reseller_PopUp}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:55.160" level="FAIL">Variable '${Reseller_PopUp}' not found. Did you mean:
+    ${Reseller_PopUp_Add}
+    ${Reseller_PopUp_Edit}</msg>
+<status status="FAIL" endtime="20200628 15:45:55.160" starttime="20200628 15:45:55.140"></status>
+</kw>
+<status status="FAIL" endtime="20200628 15:45:55.160" starttime="20200628 15:45:54.599"></status>
+</kw>
+<status status="FAIL" endtime="20200628 15:45:55.161" starttime="20200628 15:45:48.568"></status>
+</kw>
+<kw type="teardown" name="Terminate Application Under Test" library="Common">
+<doc>Closes the Hybris Website in the &lt;BROWSER&gt;</doc>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20200628 15:45:55.441" starttime="20200628 15:45:55.166"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.441" starttime="20200628 15:45:55.162"></status>
+</kw>
+<doc>Verify that the GloRep Application allows existing users to add a reseller</doc>
+<status status="FAIL" endtime="20200628 15:45:55.442" critical="yes" starttime="20200628 15:45:33.592">Variable '${Reseller_PopUp}' not found. Did you mean:
+    ${Reseller_PopUp_Add}
+    ${Reseller_PopUp_Edit}</status>
+</test>
+<test id="s1-t2" name="Test Editing a Reseller User">
+<kw type="setup" name="Launch Application Under Test" library="Common">
+<doc>Opens the Globill application in the &lt;BROWSER&gt; specified in run command or data repository</doc>
+<kw name="Import Test Data" library="DataInclude">
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../TestData/${SITENAME}.json</arg>
+</arguments>
+<assign>
+<var>${jsonfile}</var>
+</assign>
+<msg timestamp="20200628 15:45:55.448" html="yes" level="INFO">Getting file '&lt;a href="file:///home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/TestData/GloRep.json"&gt;/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/TestData/GloRep.json&lt;/a&gt;'.</msg>
+<msg timestamp="20200628 15:45:55.448" level="INFO">${jsonfile} = {
+    "setup":
+    {
+        "SITENAME":"GloRep",
+        "BROWSER":"chrome",
+        "WEBURL":"http://astelqa-za.southafricanorth.cloudapp.azure.com/GloRep.V20.1/"
+    },
+
+    "GloRep_Login":
+    {
+ ...</msg>
+<status status="PASS" endtime="20200628 15:45:55.448" starttime="20200628 15:45:55.447"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>json.loads('''${jsonfile}''')</arg>
+<arg>json</arg>
+</arguments>
+<assign>
+<var>${Data}</var>
+</assign>
+<msg timestamp="20200628 15:45:55.454" level="INFO">${Data} = {u'GlorepCurrencyVATExchangeRateDetails': {u'AddCurrencyDetails': [{u'Glorep_Currency_Description': u'GHS Cedi', u'Glorep_Currency_Symbol': u'C', u'Glorep_Currency_Override_Format': u'', u'Glorep_Curr...</msg>
+<status status="PASS" endtime="20200628 15:45:55.454" starttime="20200628 15:45:55.453"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Data}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:55.460" level="INFO">${Data} = {u'GlorepCurrencyVATExchangeRateDetails': {u'AddCurrencyDetails': [{u'Glorep_Currency_Description': u'GHS Cedi', u'Glorep_Currency_Symbol': u'C', u'Glorep_Currency_Override_Format': u'', u'Glorep_Curr...</msg>
+<status status="PASS" endtime="20200628 15:45:55.460" starttime="20200628 15:45:55.454"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.460" starttime="20200628 15:45:55.445"></status>
+</kw>
+<kw name="Import Solution Keywords" library="ScenariosIncludeList">
+<kw name="Import Builtin Scenarios" library="ScenariosIncludeList">
+<kw name="Import Page Object Keywords" library="PageObjectIncludeList">
+<kw name="Import Builtin Page Objects" library="PageObjectIncludeList">
+<kw name="Return Builtin Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{FilesPO}</var>
+</assign>
+<msg timestamp="20200628 15:45:55.465" level="INFO">@{FilesPO} = [ SidePanel.resource | Configuration.resource | Quote.resource | Administration.resource | UserManagement.resource | Login.resource | Customer.resource | Resellers.resource ]</msg>
+<status status="PASS" endtime="20200628 15:45:55.465" starttime="20200628 15:45:55.464"></status>
+</kw>
+<kw type="for" name="${filePO} IN [ @{FilesPO} ]">
+<msg timestamp="20200628 15:45:55.465" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:55.468" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${filePO} = SidePanel.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.522" starttime="20200628 15:45:55.469"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.522" starttime="20200628 15:45:55.468"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Configuration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.549" starttime="20200628 15:45:55.522"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.549" starttime="20200628 15:45:55.522"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Quote.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.565" starttime="20200628 15:45:55.550"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.566" starttime="20200628 15:45:55.549"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Administration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.572" starttime="20200628 15:45:55.566"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.572" starttime="20200628 15:45:55.566"></status>
+</kw>
+<kw type="foritem" name="${filePO} = UserManagement.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.584" starttime="20200628 15:45:55.573"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.584" starttime="20200628 15:45:55.572"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Login.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.591" starttime="20200628 15:45:55.584"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.591" starttime="20200628 15:45:55.584"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Customer.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.618" starttime="20200628 15:45:55.592"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.618" starttime="20200628 15:45:55.591"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Resellers.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.641" starttime="20200628 15:45:55.618"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.642" starttime="20200628 15:45:55.618"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.642" starttime="20200628 15:45:55.465"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.642" starttime="20200628 15:45:55.463"></status>
+</kw>
+<kw name="Import Custom Page Objects" library="PageObjectIncludeList">
+<kw name="Return Custom Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{CustomFilesPO}</var>
+</assign>
+<msg timestamp="20200628 15:45:55.644" level="INFO">@{CustomFilesPO} = [ ]</msg>
+<status status="PASS" endtime="20200628 15:45:55.644" starttime="20200628 15:45:55.643"></status>
+</kw>
+<kw type="for" name="${cfilePO} IN [ @{CustomFilesPO} ]">
+<msg timestamp="20200628 15:45:55.644" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:55.644" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<status status="PASS" endtime="20200628 15:45:55.645" starttime="20200628 15:45:55.644"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.646" starttime="20200628 15:45:55.642"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.647" starttime="20200628 15:45:55.461"></status>
+</kw>
+<kw name="Return Builtin Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{FilesSC}</var>
+</assign>
+<msg timestamp="20200628 15:45:55.649" level="INFO">@{FilesSC} = [ Common.resource | Configuration.resource | Quote.resource | Administration.resource | UserManagement.resource | Login.resource | Customer.resource | Resellers.resource ]</msg>
+<status status="PASS" endtime="20200628 15:45:55.649" starttime="20200628 15:45:55.648"></status>
+</kw>
+<kw type="for" name="${fileSC} IN [ @{FilesSC} ]">
+<msg timestamp="20200628 15:45:55.649" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:55.650" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${fileSC} = Common.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.654" starttime="20200628 15:45:55.651"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.654" starttime="20200628 15:45:55.650"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Configuration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.657" starttime="20200628 15:45:55.655"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.657" starttime="20200628 15:45:55.654"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Quote.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.658" starttime="20200628 15:45:55.657"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.659" starttime="20200628 15:45:55.657"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Administration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.660" starttime="20200628 15:45:55.659"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.660" starttime="20200628 15:45:55.659"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = UserManagement.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.665" starttime="20200628 15:45:55.661"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.665" starttime="20200628 15:45:55.660"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Login.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.667" starttime="20200628 15:45:55.666"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.667" starttime="20200628 15:45:55.665"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Customer.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.668" starttime="20200628 15:45:55.667"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.668" starttime="20200628 15:45:55.667"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Resellers.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.670" starttime="20200628 15:45:55.669"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.670" starttime="20200628 15:45:55.668"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.670" starttime="20200628 15:45:55.649"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.670" starttime="20200628 15:45:55.461"></status>
+</kw>
+<kw name="Import Custom Scenarios" library="ScenariosIncludeList">
+<kw name="Return Custom Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{CustomFilesSC}</var>
+</assign>
+<msg timestamp="20200628 15:45:55.674" level="INFO">@{CustomFilesSC} = [ ]</msg>
+<status status="PASS" endtime="20200628 15:45:55.674" starttime="20200628 15:45:55.672"></status>
+</kw>
+<kw type="for" name="${cfileSC} IN [ @{CustomFilesSC} ]">
+<msg timestamp="20200628 15:45:55.674" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:55.674" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<status status="PASS" endtime="20200628 15:45:55.675" starttime="20200628 15:45:55.674"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.675" starttime="20200628 15:45:55.670"></status>
+</kw>
+<kw name="Set Lib Search Order" library="ScenariosIncludeList">
+<kw name="Set Lib Search Order for Page Objects" library="ScenariosIncludeList">
+<kw name="Return Custom Resource List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{LibsPO}</var>
+</assign>
+<msg timestamp="20200628 15:45:55.677" level="INFO">@{LibsPO} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:45:55.677" starttime="20200628 15:45:55.677"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>@{LibsPO}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:55.678" level="INFO">@{LibsPO} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:45:55.679" starttime="20200628 15:45:55.678"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.679" starttime="20200628 15:45:55.676"></status>
+</kw>
+<kw name="Set Lib Search Order for Scenarios" library="ScenariosIncludeList">
+<kw name="Return Custom Resource List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{LibsSC}</var>
+</assign>
+<msg timestamp="20200628 15:45:55.682" level="INFO">@{LibsSC} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:45:55.682" starttime="20200628 15:45:55.681"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>@{LibsSC}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:55.683" level="INFO">@{LibsSC} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:45:55.683" starttime="20200628 15:45:55.682"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.684" starttime="20200628 15:45:55.680"></status>
+</kw>
+<kw name="Combine Lists" library="Collections">
+<doc>Combines the given ``lists`` together and returns the result.</doc>
+<arguments>
+<arg>${LibsPO}</arg>
+<arg>${LibsSC}</arg>
+</arguments>
+<assign>
+<var>@{CombinedSearchOrder}</var>
+</assign>
+<msg timestamp="20200628 15:45:55.685" level="INFO">@{CombinedSearchOrder} = [ dummy | dummy ]</msg>
+<status status="PASS" endtime="20200628 15:45:55.685" starttime="20200628 15:45:55.684"></status>
+</kw>
+<kw name="Set Library Search Order" library="BuiltIn">
+<doc>Sets the resolution order to use when a name matches multiple keywords.</doc>
+<arguments>
+<arg>@{CombinedSearchOrder}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:45:55.686" starttime="20200628 15:45:55.685"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.686" starttime="20200628 15:45:55.676"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:45:55.686" starttime="20200628 15:45:55.460"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${Data["setup"]["WEBURL"]}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200628 15:45:55.687" level="INFO">Opening browser 'chrome' to base url 'http://astelqa-za.southafricanorth.cloudapp.azure.com/GloRep.V20.1/'.</msg>
+<status status="PASS" endtime="20200628 15:45:59.260" starttime="20200628 15:45:55.687"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20200628 15:45:59.568" starttime="20200628 15:45:59.261"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20200628 15:46:09.569" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20200628 15:46:09.569" starttime="20200628 15:45:59.568"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:09.570" starttime="20200628 15:45:55.444"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.2</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:09.571" starttime="20200628 15:46:09.570"></status>
+</kw>
+<kw name="Edit Existing Reseller" library="Resellers">
+<kw name="Get GloRep Edit Reseller data" library="DataInclude">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Data["GlorepResellerDetails"]["EditReseller"]}</arg>
+</arguments>
+<assign>
+<var>${GlorepEditResellerDetails}</var>
+</assign>
+<msg timestamp="20200628 15:46:09.573" level="INFO">${GlorepEditResellerDetails} = [{u'Glorep_Code': u'MRsEx12', u'Glorep_Contact_Email': u'mrsexpleo12@expleogroup.com', u'Glorep_Mobile_Number': u'0825556666', u'Glorep_Landline_Number': u'0315631111'}]</msg>
+<status status="PASS" endtime="20200628 15:46:09.573" starttime="20200628 15:46:09.573"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${GlorepEditResellerDetails}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:09.574" level="INFO">${GlorepEditResellerDetails} = [{u'Glorep_Code': u'MRsEx12', u'Glorep_Contact_Email': u'mrsexpleo12@expleogroup.com', u'Glorep_Mobile_Number': u'0825556666', u'Glorep_Landline_Number': u'0315631111'}]</msg>
+<status status="PASS" endtime="20200628 15:46:09.575" starttime="20200628 15:46:09.574"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:09.575" starttime="20200628 15:46:09.572"></status>
+</kw>
+<kw name="Login of an existing user" library="Login">
+<doc>Excecute the steps to login with correct existing user credentials</doc>
+<kw name="Get GloRep Valid Login data" library="DataInclude">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Data["GloRep_Login"]["ValidUserLogin"]}</arg>
+</arguments>
+<assign>
+<var>${GloRepLoginInformation}</var>
+</assign>
+<msg timestamp="20200628 15:46:09.578" level="INFO">${GloRepLoginInformation} = [{u'Login_Email': u'admin@astel.co.za', u'Login_Password': u'Bill#777187'}]</msg>
+<status status="PASS" endtime="20200628 15:46:09.578" starttime="20200628 15:46:09.576"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${GloRepLoginInformation}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:09.579" level="INFO">${GloRepLoginInformation} = [{u'Login_Email': u'admin@astel.co.za', u'Login_Password': u'Bill#777187'}]</msg>
+<status status="PASS" endtime="20200628 15:46:09.579" starttime="20200628 15:46:09.578"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:09.580" starttime="20200628 15:46:09.576"></status>
+</kw>
+<kw type="for" name="${Item} IN [ @{GloRepLoginInformation} ]">
+<msg timestamp="20200628 15:46:09.580" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:09.580" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${Item} = {u'Login_Email': u'admin@astel.co.za', u'Login_Password': u'Bill#777187'}">
+<kw name="Input GloRep Login Email Address" library="Login">
+<arguments>
+<arg>${Item["Login_Email"]}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Email}</arg>
+<arg>${Email_Value}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:09.583" level="INFO">Typing text 'admin@astel.co.za' into text field 'xpath = //*[@id="Email"]'.</msg>
+<status status="PASS" endtime="20200628 15:46:10.436" starttime="20200628 15:46:09.582"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:46:10.896" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-575.png"&gt;&lt;img src="selenium-screenshot-575.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:46:10.896" starttime="20200628 15:46:10.437"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:10.897" starttime="20200628 15:46:09.581"></status>
+</kw>
+<kw name="Input GloRep Login Password" library="Login">
+<arguments>
+<arg>${Item["Login_Password"]}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password}</arg>
+<arg>${Password_Value}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:10.898" level="INFO">Typing text 'Bill#777187' into text field 'xpath = //*[@id="Password"]'.</msg>
+<status status="PASS" endtime="20200628 15:46:11.672" starttime="20200628 15:46:10.898"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:46:12.147" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-576.png"&gt;&lt;img src="selenium-screenshot-576.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:46:12.147" starttime="20200628 15:46:11.672"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:12.148" starttime="20200628 15:46:10.897"></status>
+</kw>
+<kw name="Click GloRep Login Button" library="Login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:12.149" level="INFO">Clicking element 'xpath = //div[@id='mCSB_1_container']/div/form/div[3]/div/div/input'.</msg>
+<status status="PASS" endtime="20200628 15:46:14.241" starttime="20200628 15:46:12.148"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:46:14.849" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-577.png"&gt;&lt;img src="selenium-screenshot-577.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:46:14.849" starttime="20200628 15:46:14.241"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:14.850" starttime="20200628 15:46:12.148"></status>
+</kw>
+<kw name="Validate Succesful Login" library="Login">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:15.071" level="INFO">Current page contains element 'xpath = //div[@class='sidebar-menu']'.</msg>
+<status status="PASS" endtime="20200628 15:46:15.071" starttime="20200628 15:46:14.851"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:46:15.571" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-578.png"&gt;&lt;img src="selenium-screenshot-578.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:46:15.571" starttime="20200628 15:46:15.072"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:15.571" starttime="20200628 15:46:14.850"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:15.571" starttime="20200628 15:46:09.581"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:15.572" starttime="20200628 15:46:09.580"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:15.572" starttime="20200628 15:46:09.575"></status>
+</kw>
+<kw type="for" name="${Item} IN [ @{GlorepEditResellerDetails} ]">
+<msg timestamp="20200628 15:46:15.572" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Resellers.resource' in FOR loop starting on line 38: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:15.572" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Resellers.resource' in FOR loop starting on line 38: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${Item} = {u'Glorep_Code': u'MRsEx12', u'Glorep_Contact_Email': u'mrsexpleo12@expleogroup.com', u'Glorep_Mobile_Number': u'0825556666', u'Glorep_Landline_Number': u'0315631111'}">
+<kw name="Search for Reseller" library="Resellers">
+<arguments>
+<arg>${Item["Glorep_Code"]}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Search_Reseller}</arg>
+<arg>${Element_Value}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:15.575" level="INFO">Typing text 'MRsEx12' into text field 'xpath = //label[contains(text(),'Search:')]//input'.</msg>
+<status status="PASS" endtime="20200628 15:46:16.404" starttime="20200628 15:46:15.575"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:46:16.870" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-579.png"&gt;&lt;img src="selenium-screenshot-579.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:46:16.870" starttime="20200628 15:46:16.404"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:16.871" starttime="20200628 15:46:15.573"></status>
+</kw>
+<kw name="Click on Edit Reseller" library="Resellers">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Edit_Existing_Reseller_Code}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:16.873" level="INFO">Clicking element 'xpath = //a[@id='GoToReseller']//span'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:46:17.543" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-580.png"&gt;&lt;img src="selenium-screenshot-580.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:46:17.544" starttime="20200628 15:46:17.090"></status>
+</kw>
+<msg timestamp="20200628 15:46:17.553" level="FAIL">Element with locator 'xpath = //a[@id='GoToReseller']//span' not found.</msg>
+<status status="FAIL" endtime="20200628 15:46:17.553" starttime="20200628 15:46:16.873"></status>
+</kw>
+<status status="FAIL" endtime="20200628 15:46:17.554" starttime="20200628 15:46:16.871"></status>
+</kw>
+<status status="FAIL" endtime="20200628 15:46:17.554" starttime="20200628 15:46:15.573"></status>
+</kw>
+<status status="FAIL" endtime="20200628 15:46:17.555" starttime="20200628 15:46:15.572"></status>
+</kw>
+<status status="FAIL" endtime="20200628 15:46:17.555" starttime="20200628 15:46:09.571"></status>
+</kw>
+<kw type="teardown" name="Terminate Application Under Test" library="Common">
+<doc>Closes the Hybris Website in the &lt;BROWSER&gt;</doc>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20200628 15:46:17.846" starttime="20200628 15:46:17.569"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:17.846" starttime="20200628 15:46:17.557"></status>
+</kw>
+<doc>Verify that the GloRep Application allows existing users to Edit a reseller</doc>
+<status status="FAIL" endtime="20200628 15:46:17.846" critical="yes" starttime="20200628 15:45:55.443">Element with locator 'xpath = //a[@id='GoToReseller']//span' not found.</status>
+</test>
+<test id="s1-t3" name="Test View Reseller View Packages">
+<kw type="setup" name="Launch Application Under Test" library="Common">
+<doc>Opens the Globill application in the &lt;BROWSER&gt; specified in run command or data repository</doc>
+<kw name="Import Test Data" library="DataInclude">
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../TestData/${SITENAME}.json</arg>
+</arguments>
+<assign>
+<var>${jsonfile}</var>
+</assign>
+<msg timestamp="20200628 15:46:17.855" html="yes" level="INFO">Getting file '&lt;a href="file:///home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/TestData/GloRep.json"&gt;/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/TestData/GloRep.json&lt;/a&gt;'.</msg>
+<msg timestamp="20200628 15:46:17.859" level="INFO">${jsonfile} = {
+    "setup":
+    {
+        "SITENAME":"GloRep",
+        "BROWSER":"chrome",
+        "WEBURL":"http://astelqa-za.southafricanorth.cloudapp.azure.com/GloRep.V20.1/"
+    },
+
+    "GloRep_Login":
+    {
+ ...</msg>
+<status status="PASS" endtime="20200628 15:46:17.860" starttime="20200628 15:46:17.852"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>json.loads('''${jsonfile}''')</arg>
+<arg>json</arg>
+</arguments>
+<assign>
+<var>${Data}</var>
+</assign>
+<msg timestamp="20200628 15:46:17.864" level="INFO">${Data} = {u'GlorepCurrencyVATExchangeRateDetails': {u'AddCurrencyDetails': [{u'Glorep_Currency_Description': u'GHS Cedi', u'Glorep_Currency_Symbol': u'C', u'Glorep_Currency_Override_Format': u'', u'Glorep_Curr...</msg>
+<status status="PASS" endtime="20200628 15:46:17.864" starttime="20200628 15:46:17.863"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Data}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:17.866" level="INFO">${Data} = {u'GlorepCurrencyVATExchangeRateDetails': {u'AddCurrencyDetails': [{u'Glorep_Currency_Description': u'GHS Cedi', u'Glorep_Currency_Symbol': u'C', u'Glorep_Currency_Override_Format': u'', u'Glorep_Curr...</msg>
+<status status="PASS" endtime="20200628 15:46:17.866" starttime="20200628 15:46:17.865"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:17.867" starttime="20200628 15:46:17.850"></status>
+</kw>
+<kw name="Import Solution Keywords" library="ScenariosIncludeList">
+<kw name="Import Builtin Scenarios" library="ScenariosIncludeList">
+<kw name="Import Page Object Keywords" library="PageObjectIncludeList">
+<kw name="Import Builtin Page Objects" library="PageObjectIncludeList">
+<kw name="Return Builtin Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{FilesPO}</var>
+</assign>
+<msg timestamp="20200628 15:46:17.870" level="INFO">@{FilesPO} = [ SidePanel.resource | Configuration.resource | Quote.resource | Administration.resource | UserManagement.resource | Login.resource | Customer.resource | Resellers.resource ]</msg>
+<status status="PASS" endtime="20200628 15:46:17.870" starttime="20200628 15:46:17.870"></status>
+</kw>
+<kw type="for" name="${filePO} IN [ @{FilesPO} ]">
+<msg timestamp="20200628 15:46:17.871" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:17.871" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${filePO} = SidePanel.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:17.885" starttime="20200628 15:46:17.872"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:17.885" starttime="20200628 15:46:17.871"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Configuration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:17.934" starttime="20200628 15:46:17.886"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:17.934" starttime="20200628 15:46:17.885"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Quote.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:17.949" starttime="20200628 15:46:17.934"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:17.949" starttime="20200628 15:46:17.934"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Administration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:17.963" starttime="20200628 15:46:17.950"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:17.963" starttime="20200628 15:46:17.949"></status>
+</kw>
+<kw type="foritem" name="${filePO} = UserManagement.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:17.982" starttime="20200628 15:46:17.964"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:17.982" starttime="20200628 15:46:17.963"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Login.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:17.987" starttime="20200628 15:46:17.982"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:17.987" starttime="20200628 15:46:17.982"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Customer.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:18.015" starttime="20200628 15:46:17.987"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.015" starttime="20200628 15:46:17.987"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Resellers.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:18.038" starttime="20200628 15:46:18.016"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.038" starttime="20200628 15:46:18.015"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.038" starttime="20200628 15:46:17.871"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.039" starttime="20200628 15:46:17.869"></status>
+</kw>
+<kw name="Import Custom Page Objects" library="PageObjectIncludeList">
+<kw name="Return Custom Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{CustomFilesPO}</var>
+</assign>
+<msg timestamp="20200628 15:46:18.041" level="INFO">@{CustomFilesPO} = [ ]</msg>
+<status status="PASS" endtime="20200628 15:46:18.041" starttime="20200628 15:46:18.040"></status>
+</kw>
+<kw type="for" name="${cfilePO} IN [ @{CustomFilesPO} ]">
+<msg timestamp="20200628 15:46:18.042" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:18.042" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<status status="PASS" endtime="20200628 15:46:18.042" starttime="20200628 15:46:18.041"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.042" starttime="20200628 15:46:18.039"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.043" starttime="20200628 15:46:17.869"></status>
+</kw>
+<kw name="Return Builtin Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{FilesSC}</var>
+</assign>
+<msg timestamp="20200628 15:46:18.044" level="INFO">@{FilesSC} = [ Common.resource | Configuration.resource | Quote.resource | Administration.resource | UserManagement.resource | Login.resource | Customer.resource | Resellers.resource ]</msg>
+<status status="PASS" endtime="20200628 15:46:18.044" starttime="20200628 15:46:18.043"></status>
+</kw>
+<kw type="for" name="${fileSC} IN [ @{FilesSC} ]">
+<msg timestamp="20200628 15:46:18.044" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:18.046" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${fileSC} = Common.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:18.053" starttime="20200628 15:46:18.047"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.054" starttime="20200628 15:46:18.047"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Configuration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:18.057" starttime="20200628 15:46:18.055"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.057" starttime="20200628 15:46:18.054"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Quote.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:18.058" starttime="20200628 15:46:18.057"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.058" starttime="20200628 15:46:18.057"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Administration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:18.060" starttime="20200628 15:46:18.059"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.060" starttime="20200628 15:46:18.059"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = UserManagement.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:18.063" starttime="20200628 15:46:18.060"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.063" starttime="20200628 15:46:18.060"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Login.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:18.065" starttime="20200628 15:46:18.064"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.065" starttime="20200628 15:46:18.063"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Customer.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:18.066" starttime="20200628 15:46:18.066"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.066" starttime="20200628 15:46:18.065"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Resellers.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:18.069" starttime="20200628 15:46:18.067"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.069" starttime="20200628 15:46:18.067"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.069" starttime="20200628 15:46:18.044"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.070" starttime="20200628 15:46:17.868"></status>
+</kw>
+<kw name="Import Custom Scenarios" library="ScenariosIncludeList">
+<kw name="Return Custom Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{CustomFilesSC}</var>
+</assign>
+<msg timestamp="20200628 15:46:18.071" level="INFO">@{CustomFilesSC} = [ ]</msg>
+<status status="PASS" endtime="20200628 15:46:18.071" starttime="20200628 15:46:18.071"></status>
+</kw>
+<kw type="for" name="${cfileSC} IN [ @{CustomFilesSC} ]">
+<msg timestamp="20200628 15:46:18.072" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:18.072" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<status status="PASS" endtime="20200628 15:46:18.072" starttime="20200628 15:46:18.072"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.073" starttime="20200628 15:46:18.070"></status>
+</kw>
+<kw name="Set Lib Search Order" library="ScenariosIncludeList">
+<kw name="Set Lib Search Order for Page Objects" library="ScenariosIncludeList">
+<kw name="Return Custom Resource List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{LibsPO}</var>
+</assign>
+<msg timestamp="20200628 15:46:18.075" level="INFO">@{LibsPO} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:46:18.076" starttime="20200628 15:46:18.075"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>@{LibsPO}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:18.077" level="INFO">@{LibsPO} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:46:18.077" starttime="20200628 15:46:18.076"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.077" starttime="20200628 15:46:18.074"></status>
+</kw>
+<kw name="Set Lib Search Order for Scenarios" library="ScenariosIncludeList">
+<kw name="Return Custom Resource List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{LibsSC}</var>
+</assign>
+<msg timestamp="20200628 15:46:18.081" level="INFO">@{LibsSC} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:46:18.082" starttime="20200628 15:46:18.081"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>@{LibsSC}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:18.083" level="INFO">@{LibsSC} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:46:18.083" starttime="20200628 15:46:18.082"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.083" starttime="20200628 15:46:18.078"></status>
+</kw>
+<kw name="Combine Lists" library="Collections">
+<doc>Combines the given ``lists`` together and returns the result.</doc>
+<arguments>
+<arg>${LibsPO}</arg>
+<arg>${LibsSC}</arg>
+</arguments>
+<assign>
+<var>@{CombinedSearchOrder}</var>
+</assign>
+<msg timestamp="20200628 15:46:18.084" level="INFO">@{CombinedSearchOrder} = [ dummy | dummy ]</msg>
+<status status="PASS" endtime="20200628 15:46:18.085" starttime="20200628 15:46:18.084"></status>
+</kw>
+<kw name="Set Library Search Order" library="BuiltIn">
+<doc>Sets the resolution order to use when a name matches multiple keywords.</doc>
+<arguments>
+<arg>@{CombinedSearchOrder}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:18.086" starttime="20200628 15:46:18.085"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.086" starttime="20200628 15:46:18.073"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:18.086" starttime="20200628 15:46:17.867"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${Data["setup"]["WEBURL"]}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:18.087" level="INFO">Opening browser 'chrome' to base url 'http://astelqa-za.southafricanorth.cloudapp.azure.com/GloRep.V20.1/'.</msg>
+<status status="PASS" endtime="20200628 15:46:21.709" starttime="20200628 15:46:18.087"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20200628 15:46:22.018" starttime="20200628 15:46:21.709"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20200628 15:46:32.020" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20200628 15:46:32.020" starttime="20200628 15:46:22.018"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:32.020" starttime="20200628 15:46:17.849"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.2</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:32.021" starttime="20200628 15:46:32.021"></status>
+</kw>
+<kw name="View Reseller Packages" library="Resellers">
+<kw name="Get GloRep Add Reseller data" library="DataInclude">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Data["GlorepResellerDetails"]["AddReseller"]}</arg>
+</arguments>
+<assign>
+<var>${GlorepAddResellerDetails}</var>
+</assign>
+<msg timestamp="20200628 15:46:32.024" level="INFO">${GlorepAddResellerDetails} = [{u'Glorep_Physical_Address_1': u'12 Ncondo Place', u'Glorep_Code': u'MRSEx12', u'Glorep_Title': u'Prof', u'Glorep_Lastname': u'ExpleoTester12', u'Glorep_Show_Storefront': u'Active', u'Glorep_Contact_...</msg>
+<status status="PASS" endtime="20200628 15:46:32.024" starttime="20200628 15:46:32.023"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${GlorepAddResellerDetails}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:32.025" level="INFO">${GlorepAddResellerDetails} = [{u'Glorep_Physical_Address_1': u'12 Ncondo Place', u'Glorep_Code': u'MRSEx12', u'Glorep_Title': u'Prof', u'Glorep_Lastname': u'ExpleoTester12', u'Glorep_Show_Storefront': u'Active', u'Glorep_Contact_...</msg>
+<status status="PASS" endtime="20200628 15:46:32.025" starttime="20200628 15:46:32.024"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:32.025" starttime="20200628 15:46:32.023"></status>
+</kw>
+<kw name="Login of an existing user" library="Login">
+<doc>Excecute the steps to login with correct existing user credentials</doc>
+<kw name="Get GloRep Valid Login data" library="DataInclude">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Data["GloRep_Login"]["ValidUserLogin"]}</arg>
+</arguments>
+<assign>
+<var>${GloRepLoginInformation}</var>
+</assign>
+<msg timestamp="20200628 15:46:32.028" level="INFO">${GloRepLoginInformation} = [{u'Login_Email': u'admin@astel.co.za', u'Login_Password': u'Bill#777187'}]</msg>
+<status status="PASS" endtime="20200628 15:46:32.028" starttime="20200628 15:46:32.027"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${GloRepLoginInformation}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:32.029" level="INFO">${GloRepLoginInformation} = [{u'Login_Email': u'admin@astel.co.za', u'Login_Password': u'Bill#777187'}]</msg>
+<status status="PASS" endtime="20200628 15:46:32.030" starttime="20200628 15:46:32.029"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:32.030" starttime="20200628 15:46:32.026"></status>
+</kw>
+<kw type="for" name="${Item} IN [ @{GloRepLoginInformation} ]">
+<msg timestamp="20200628 15:46:32.030" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:32.030" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${Item} = {u'Login_Email': u'admin@astel.co.za', u'Login_Password': u'Bill#777187'}">
+<kw name="Input GloRep Login Email Address" library="Login">
+<arguments>
+<arg>${Item["Login_Email"]}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Email}</arg>
+<arg>${Email_Value}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:32.034" level="INFO">Typing text 'admin@astel.co.za' into text field 'xpath = //*[@id="Email"]'.</msg>
+<status status="PASS" endtime="20200628 15:46:32.833" starttime="20200628 15:46:32.033"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:46:33.281" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-581.png"&gt;&lt;img src="selenium-screenshot-581.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:46:33.281" starttime="20200628 15:46:32.833"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:33.282" starttime="20200628 15:46:32.031"></status>
+</kw>
+<kw name="Input GloRep Login Password" library="Login">
+<arguments>
+<arg>${Item["Login_Password"]}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password}</arg>
+<arg>${Password_Value}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:33.285" level="INFO">Typing text 'Bill#777187' into text field 'xpath = //*[@id="Password"]'.</msg>
+<status status="PASS" endtime="20200628 15:46:34.049" starttime="20200628 15:46:33.284"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:46:34.521" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-582.png"&gt;&lt;img src="selenium-screenshot-582.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:46:34.521" starttime="20200628 15:46:34.050"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:34.522" starttime="20200628 15:46:33.282"></status>
+</kw>
+<kw name="Click GloRep Login Button" library="Login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:34.524" level="INFO">Clicking element 'xpath = //div[@id='mCSB_1_container']/div/form/div[3]/div/div/input'.</msg>
+<status status="PASS" endtime="20200628 15:46:36.655" starttime="20200628 15:46:34.524"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:46:37.288" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-583.png"&gt;&lt;img src="selenium-screenshot-583.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:46:37.289" starttime="20200628 15:46:36.656"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:37.289" starttime="20200628 15:46:34.522"></status>
+</kw>
+<kw name="Validate Succesful Login" library="Login">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:37.512" level="INFO">Current page contains element 'xpath = //div[@class='sidebar-menu']'.</msg>
+<status status="PASS" endtime="20200628 15:46:37.513" starttime="20200628 15:46:37.290"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:46:38.006" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-584.png"&gt;&lt;img src="selenium-screenshot-584.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:46:38.006" starttime="20200628 15:46:37.513"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:38.007" starttime="20200628 15:46:37.289"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:38.007" starttime="20200628 15:46:32.031"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:38.007" starttime="20200628 15:46:32.030"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:38.007" starttime="20200628 15:46:32.026"></status>
+</kw>
+<kw type="for" name="${Item} IN [ @{GlorepAddResellerDetails} ]">
+<msg timestamp="20200628 15:46:38.008" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Resellers.resource' in FOR loop starting on line 53: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:38.008" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Resellers.resource' in FOR loop starting on line 53: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${Item} = {u'Glorep_Physical_Address_1': u'12 Ncondo Place', u'Glorep_Code': u'MRSEx12', u'Glorep_Title': u'Prof', u'Glorep_Lastname': u'ExpleoTester12', u'Glorep_Show_Storefront': u'Active', u'Glorep_Contact_P...">
+<kw name="Search for Reseller" library="Resellers">
+<arguments>
+<arg>${Item["Glorep_Code"]}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Search_Reseller}</arg>
+<arg>${Element_Value}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:38.014" level="INFO">Typing text 'MRSEx12' into text field 'xpath = //label[contains(text(),'Search:')]//input'.</msg>
+<status status="PASS" endtime="20200628 15:46:38.868" starttime="20200628 15:46:38.013"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:46:39.328" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-585.png"&gt;&lt;img src="selenium-screenshot-585.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:46:39.329" starttime="20200628 15:46:38.869"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:39.329" starttime="20200628 15:46:38.010"></status>
+</kw>
+<kw name="Click on View Reseller Packages" library="Resellers">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${View_Packages}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:39.331" level="INFO">Clicking element 'xpath = //a[@id='ViewPackages']//span'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:46:40.002" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-586.png"&gt;&lt;img src="selenium-screenshot-586.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:46:40.002" starttime="20200628 15:46:39.551"></status>
+</kw>
+<msg timestamp="20200628 15:46:40.003" level="FAIL">Element with locator 'xpath = //a[@id='ViewPackages']//span' not found.</msg>
+<status status="FAIL" endtime="20200628 15:46:40.003" starttime="20200628 15:46:39.330"></status>
+</kw>
+<status status="FAIL" endtime="20200628 15:46:40.004" starttime="20200628 15:46:39.329"></status>
+</kw>
+<status status="FAIL" endtime="20200628 15:46:40.004" starttime="20200628 15:46:38.009"></status>
+</kw>
+<status status="FAIL" endtime="20200628 15:46:40.004" starttime="20200628 15:46:38.008"></status>
+</kw>
+<status status="FAIL" endtime="20200628 15:46:40.005" starttime="20200628 15:46:32.022"></status>
+</kw>
+<kw type="teardown" name="Terminate Application Under Test" library="Common">
+<doc>Closes the Hybris Website in the &lt;BROWSER&gt;</doc>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20200628 15:46:40.286" starttime="20200628 15:46:40.007"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.287" starttime="20200628 15:46:40.006"></status>
+</kw>
+<doc>Verify that the GloRep Application allows existing users to view packages assigned to a reseller</doc>
+<status status="FAIL" endtime="20200628 15:46:40.287" critical="yes" starttime="20200628 15:46:17.847">Element with locator 'xpath = //a[@id='ViewPackages']//span' not found.</status>
+</test>
+<test id="s1-t4" name="Test Reseller Add Packages">
+<kw type="setup" name="Launch Application Under Test" library="Common">
+<doc>Opens the Globill application in the &lt;BROWSER&gt; specified in run command or data repository</doc>
+<kw name="Import Test Data" library="DataInclude">
+<kw name="Get File" library="OperatingSystem">
+<doc>Returns the contents of a specified file.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../TestData/${SITENAME}.json</arg>
+</arguments>
+<assign>
+<var>${jsonfile}</var>
+</assign>
+<msg timestamp="20200628 15:46:40.292" html="yes" level="INFO">Getting file '&lt;a href="file:///home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/TestData/GloRep.json"&gt;/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/TestData/GloRep.json&lt;/a&gt;'.</msg>
+<msg timestamp="20200628 15:46:40.293" level="INFO">${jsonfile} = {
+    "setup":
+    {
+        "SITENAME":"GloRep",
+        "BROWSER":"chrome",
+        "WEBURL":"http://astelqa-za.southafricanorth.cloudapp.azure.com/GloRep.V20.1/"
+    },
+
+    "GloRep_Login":
+    {
+ ...</msg>
+<status status="PASS" endtime="20200628 15:46:40.293" starttime="20200628 15:46:40.292"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>json.loads('''${jsonfile}''')</arg>
+<arg>json</arg>
+</arguments>
+<assign>
+<var>${Data}</var>
+</assign>
+<msg timestamp="20200628 15:46:40.302" level="INFO">${Data} = {u'GlorepCurrencyVATExchangeRateDetails': {u'AddCurrencyDetails': [{u'Glorep_Currency_Description': u'GHS Cedi', u'Glorep_Currency_Symbol': u'C', u'Glorep_Currency_Override_Format': u'', u'Glorep_Curr...</msg>
+<status status="PASS" endtime="20200628 15:46:40.302" starttime="20200628 15:46:40.294"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Data}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:40.303" level="INFO">${Data} = {u'GlorepCurrencyVATExchangeRateDetails': {u'AddCurrencyDetails': [{u'Glorep_Currency_Description': u'GHS Cedi', u'Glorep_Currency_Symbol': u'C', u'Glorep_Currency_Override_Format': u'', u'Glorep_Curr...</msg>
+<status status="PASS" endtime="20200628 15:46:40.303" starttime="20200628 15:46:40.302"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.304" starttime="20200628 15:46:40.291"></status>
+</kw>
+<kw name="Import Solution Keywords" library="ScenariosIncludeList">
+<kw name="Import Builtin Scenarios" library="ScenariosIncludeList">
+<kw name="Import Page Object Keywords" library="PageObjectIncludeList">
+<kw name="Import Builtin Page Objects" library="PageObjectIncludeList">
+<kw name="Return Builtin Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{FilesPO}</var>
+</assign>
+<msg timestamp="20200628 15:46:40.307" level="INFO">@{FilesPO} = [ SidePanel.resource | Configuration.resource | Quote.resource | Administration.resource | UserManagement.resource | Login.resource | Customer.resource | Resellers.resource ]</msg>
+<status status="PASS" endtime="20200628 15:46:40.307" starttime="20200628 15:46:40.306"></status>
+</kw>
+<kw type="for" name="${filePO} IN [ @{FilesPO} ]">
+<msg timestamp="20200628 15:46:40.307" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:40.308" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${filePO} = SidePanel.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.325" starttime="20200628 15:46:40.309"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.325" starttime="20200628 15:46:40.309"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Configuration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.364" starttime="20200628 15:46:40.326"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.364" starttime="20200628 15:46:40.326"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Quote.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.382" starttime="20200628 15:46:40.364"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.382" starttime="20200628 15:46:40.364"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Administration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.390" starttime="20200628 15:46:40.383"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.390" starttime="20200628 15:46:40.383"></status>
+</kw>
+<kw type="foritem" name="${filePO} = UserManagement.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.404" starttime="20200628 15:46:40.391"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.404" starttime="20200628 15:46:40.390"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Login.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.411" starttime="20200628 15:46:40.404"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.411" starttime="20200628 15:46:40.404"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Customer.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.436" starttime="20200628 15:46:40.412"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.436" starttime="20200628 15:46:40.411"></status>
+</kw>
+<kw type="foritem" name="${filePO} = Resellers.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/${filePO}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.464" starttime="20200628 15:46:40.437"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.464" starttime="20200628 15:46:40.437"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.464" starttime="20200628 15:46:40.307"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.465" starttime="20200628 15:46:40.306"></status>
+</kw>
+<kw name="Import Custom Page Objects" library="PageObjectIncludeList">
+<kw name="Return Custom Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{CustomFilesPO}</var>
+</assign>
+<msg timestamp="20200628 15:46:40.466" level="INFO">@{CustomFilesPO} = [ ]</msg>
+<status status="PASS" endtime="20200628 15:46:40.467" starttime="20200628 15:46:40.466"></status>
+</kw>
+<kw type="for" name="${cfilePO} IN [ @{CustomFilesPO} ]">
+<msg timestamp="20200628 15:46:40.467" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:40.467" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<status status="PASS" endtime="20200628 15:46:40.468" starttime="20200628 15:46:40.467"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.468" starttime="20200628 15:46:40.465"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.468" starttime="20200628 15:46:40.305"></status>
+</kw>
+<kw name="Return Builtin Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{FilesSC}</var>
+</assign>
+<msg timestamp="20200628 15:46:40.469" level="INFO">@{FilesSC} = [ Common.resource | Configuration.resource | Quote.resource | Administration.resource | UserManagement.resource | Login.resource | Customer.resource | Resellers.resource ]</msg>
+<status status="PASS" endtime="20200628 15:46:40.469" starttime="20200628 15:46:40.468"></status>
+</kw>
+<kw type="for" name="${fileSC} IN [ @{FilesSC} ]">
+<msg timestamp="20200628 15:46:40.469" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:40.469" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${fileSC} = Common.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.473" starttime="20200628 15:46:40.470"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.473" starttime="20200628 15:46:40.470"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Configuration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.475" starttime="20200628 15:46:40.474"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.475" starttime="20200628 15:46:40.473"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Quote.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.479" starttime="20200628 15:46:40.476"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.479" starttime="20200628 15:46:40.476"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Administration.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.480" starttime="20200628 15:46:40.480"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.481" starttime="20200628 15:46:40.479"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = UserManagement.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.482" starttime="20200628 15:46:40.481"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.482" starttime="20200628 15:46:40.481"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Login.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.484" starttime="20200628 15:46:40.483"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.484" starttime="20200628 15:46:40.482"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Customer.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.485" starttime="20200628 15:46:40.484"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.485" starttime="20200628 15:46:40.484"></status>
+</kw>
+<kw type="foritem" name="${fileSC} = Resellers.resource">
+<kw name="Import Resource" library="BuiltIn">
+<doc>Imports a resource file with the given path.</doc>
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/${fileSC}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.486" starttime="20200628 15:46:40.485"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.486" starttime="20200628 15:46:40.485"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.486" starttime="20200628 15:46:40.469"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.487" starttime="20200628 15:46:40.304"></status>
+</kw>
+<kw name="Import Custom Scenarios" library="ScenariosIncludeList">
+<kw name="Return Custom Filename List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{CustomFilesSC}</var>
+</assign>
+<msg timestamp="20200628 15:46:40.488" level="INFO">@{CustomFilesSC} = [ ]</msg>
+<status status="PASS" endtime="20200628 15:46:40.488" starttime="20200628 15:46:40.488"></status>
+</kw>
+<kw type="for" name="${cfileSC} IN [ @{CustomFilesSC} ]">
+<msg timestamp="20200628 15:46:40.488" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:40.489" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<status status="PASS" endtime="20200628 15:46:40.489" starttime="20200628 15:46:40.488"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.489" starttime="20200628 15:46:40.487"></status>
+</kw>
+<kw name="Set Lib Search Order" library="ScenariosIncludeList">
+<kw name="Set Lib Search Order for Page Objects" library="ScenariosIncludeList">
+<kw name="Return Custom Resource List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/PageObjects/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{LibsPO}</var>
+</assign>
+<msg timestamp="20200628 15:46:40.493" level="INFO">@{LibsPO} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:46:40.493" starttime="20200628 15:46:40.492"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>@{LibsPO}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:40.496" level="INFO">@{LibsPO} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:46:40.496" starttime="20200628 15:46:40.494"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.496" starttime="20200628 15:46:40.490"></status>
+</kw>
+<kw name="Set Lib Search Order for Scenarios" library="ScenariosIncludeList">
+<kw name="Return Custom Resource List" library="ListCustomResources">
+<arguments>
+<arg>/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/../AstelKeywordLibraries/Scenarios/Custom/</arg>
+<arg>${SITENAME}</arg>
+</arguments>
+<assign>
+<var>@{LibsSC}</var>
+</assign>
+<msg timestamp="20200628 15:46:40.498" level="INFO">@{LibsSC} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:46:40.498" starttime="20200628 15:46:40.497"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>@{LibsSC}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:40.499" level="INFO">@{LibsSC} = [ dummy ]</msg>
+<status status="PASS" endtime="20200628 15:46:40.499" starttime="20200628 15:46:40.498"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.499" starttime="20200628 15:46:40.497"></status>
+</kw>
+<kw name="Combine Lists" library="Collections">
+<doc>Combines the given ``lists`` together and returns the result.</doc>
+<arguments>
+<arg>${LibsPO}</arg>
+<arg>${LibsSC}</arg>
+</arguments>
+<assign>
+<var>@{CombinedSearchOrder}</var>
+</assign>
+<msg timestamp="20200628 15:46:40.500" level="INFO">@{CombinedSearchOrder} = [ dummy | dummy ]</msg>
+<status status="PASS" endtime="20200628 15:46:40.501" starttime="20200628 15:46:40.500"></status>
+</kw>
+<kw name="Set Library Search Order" library="BuiltIn">
+<doc>Sets the resolution order to use when a name matches multiple keywords.</doc>
+<arguments>
+<arg>@{CombinedSearchOrder}</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:40.501" starttime="20200628 15:46:40.501"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.502" starttime="20200628 15:46:40.490"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:40.502" starttime="20200628 15:46:40.304"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${Data["setup"]["WEBURL"]}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:40.503" level="INFO">Opening browser 'chrome' to base url 'http://astelqa-za.southafricanorth.cloudapp.azure.com/GloRep.V20.1/'.</msg>
+<status status="PASS" endtime="20200628 15:46:45.233" starttime="20200628 15:46:40.502"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20200628 15:46:45.545" starttime="20200628 15:46:45.234"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20200628 15:46:55.547" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20200628 15:46:55.547" starttime="20200628 15:46:45.546"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:55.547" starttime="20200628 15:46:40.290"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.2</arg>
+</arguments>
+<status status="PASS" endtime="20200628 15:46:55.548" starttime="20200628 15:46:55.548"></status>
+</kw>
+<kw name="Add Reseller Packages" library="Resellers">
+<kw name="Get GloRep Reseller Packages data" library="DataInclude">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Data["GlorepResellerDetails"]["AddPackageToReseller"]}</arg>
+</arguments>
+<assign>
+<var>${GlorepResellerPackagesDetails}</var>
+</assign>
+<msg timestamp="20200628 15:46:55.550" level="INFO">${GlorepResellerPackagesDetails} = [{u'Glorep_Code': u'MRsEx12', u'Glorep_Package': u'GMS2 SharePoint Online (Plan 1)-Monthly'}]</msg>
+<status status="PASS" endtime="20200628 15:46:55.550" starttime="20200628 15:46:55.550"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${GlorepResellerPackagesDetails}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:55.552" level="INFO">${GlorepResellerPackagesDetails} = [{u'Glorep_Code': u'MRsEx12', u'Glorep_Package': u'GMS2 SharePoint Online (Plan 1)-Monthly'}]</msg>
+<status status="PASS" endtime="20200628 15:46:55.552" starttime="20200628 15:46:55.551"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:55.552" starttime="20200628 15:46:55.549"></status>
+</kw>
+<kw name="Login of an existing user" library="Login">
+<doc>Excecute the steps to login with correct existing user credentials</doc>
+<kw name="Get GloRep Valid Login data" library="DataInclude">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${Data["GloRep_Login"]["ValidUserLogin"]}</arg>
+</arguments>
+<assign>
+<var>${GloRepLoginInformation}</var>
+</assign>
+<msg timestamp="20200628 15:46:55.554" level="INFO">${GloRepLoginInformation} = [{u'Login_Email': u'admin@astel.co.za', u'Login_Password': u'Bill#777187'}]</msg>
+<status status="PASS" endtime="20200628 15:46:55.554" starttime="20200628 15:46:55.553"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${GloRepLoginInformation}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:55.556" level="INFO">${GloRepLoginInformation} = [{u'Login_Email': u'admin@astel.co.za', u'Login_Password': u'Bill#777187'}]</msg>
+<status status="PASS" endtime="20200628 15:46:55.556" starttime="20200628 15:46:55.555"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:55.556" starttime="20200628 15:46:55.553"></status>
+</kw>
+<kw type="for" name="${Item} IN [ @{GloRepLoginInformation} ]">
+<msg timestamp="20200628 15:46:55.556" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:55.556" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${Item} = {u'Login_Email': u'admin@astel.co.za', u'Login_Password': u'Bill#777187'}">
+<kw name="Input GloRep Login Email Address" library="Login">
+<arguments>
+<arg>${Item["Login_Email"]}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Email}</arg>
+<arg>${Email_Value}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:55.559" level="INFO">Typing text 'admin@astel.co.za' into text field 'xpath = //*[@id="Email"]'.</msg>
+<status status="PASS" endtime="20200628 15:46:56.368" starttime="20200628 15:46:55.558"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:46:56.813" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-587.png"&gt;&lt;img src="selenium-screenshot-587.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:46:56.813" starttime="20200628 15:46:56.369"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:56.814" starttime="20200628 15:46:55.557"></status>
+</kw>
+<kw name="Input GloRep Login Password" library="Login">
+<arguments>
+<arg>${Item["Login_Password"]}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password}</arg>
+<arg>${Password_Value}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:56.816" level="INFO">Typing text 'Bill#777187' into text field 'xpath = //*[@id="Password"]'.</msg>
+<status status="PASS" endtime="20200628 15:46:57.561" starttime="20200628 15:46:56.815"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:46:58.012" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-588.png"&gt;&lt;img src="selenium-screenshot-588.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:46:58.013" starttime="20200628 15:46:57.562"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:46:58.013" starttime="20200628 15:46:56.814"></status>
+</kw>
+<kw name="Click GloRep Login Button" library="Login">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20200628 15:46:58.018" level="INFO">Clicking element 'xpath = //div[@id='mCSB_1_container']/div/form/div[3]/div/div/input'.</msg>
+<status status="PASS" endtime="20200628 15:47:00.105" starttime="20200628 15:46:58.016"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:47:00.769" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-589.png"&gt;&lt;img src="selenium-screenshot-589.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:47:00.769" starttime="20200628 15:47:00.105"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:47:00.770" starttime="20200628 15:46:58.013"></status>
+</kw>
+<kw name="Validate Succesful Login" library="Login">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20200628 15:47:00.991" level="INFO">Current page contains element 'xpath = //div[@class='sidebar-menu']'.</msg>
+<status status="PASS" endtime="20200628 15:47:00.991" starttime="20200628 15:47:00.771"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:47:01.478" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-590.png"&gt;&lt;img src="selenium-screenshot-590.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:47:01.479" starttime="20200628 15:47:00.992"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:47:01.479" starttime="20200628 15:47:00.770"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:47:01.479" starttime="20200628 15:46:55.557"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:47:01.480" starttime="20200628 15:46:55.556"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:47:01.480" starttime="20200628 15:46:55.552"></status>
+</kw>
+<kw name="Click on Assign Solution Item" library="SidePanel">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Admin_Assign_Solutions}</arg>
+</arguments>
+<msg timestamp="20200628 15:47:01.483" level="INFO">Clicking element 'xpath = //span[contains(text(),'Assign Solutions')]'.</msg>
+<status status="PASS" endtime="20200628 15:47:03.620" starttime="20200628 15:47:01.482"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:47:04.309" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-591.png"&gt;&lt;img src="selenium-screenshot-591.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:47:04.309" starttime="20200628 15:47:03.620"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:47:04.310" starttime="20200628 15:47:01.481"></status>
+</kw>
+<kw type="for" name="${Item} IN [ @{GlorepResellerPackagesDetails} ]">
+<msg timestamp="20200628 15:47:04.311" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Resellers.resource' in FOR loop starting on line 62: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:47:04.311" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Resellers.resource' in FOR loop starting on line 62: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<kw type="foritem" name="${Item} = {u'Glorep_Code': u'MRsEx12', u'Glorep_Package': u'GMS2 SharePoint Online (Plan 1)-Monthly'}">
+<kw name="Search for Packages" library="Resellers">
+<arguments>
+<arg>${Item["Glorep_Package"]}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Reseller_Search_Package}</arg>
+<arg>${Element_Value}</arg>
+</arguments>
+<msg timestamp="20200628 15:47:04.316" level="INFO">Typing text 'GMS2 SharePoint Online (Plan 1)-Monthly' into text field 'xpath = //label[contains(text(),'Search:')]//input'.</msg>
+<status status="PASS" endtime="20200628 15:47:05.738" starttime="20200628 15:47:04.315"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:47:06.210" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-592.png"&gt;&lt;img src="selenium-screenshot-592.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:47:06.210" starttime="20200628 15:47:05.738"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:47:06.211" starttime="20200628 15:47:04.313"></status>
+</kw>
+<kw name="Click on Add Reseller Packages" library="Resellers">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Reseller_Add_Package}</arg>
+</arguments>
+<msg timestamp="20200628 15:47:06.213" level="INFO">Clicking element 'xpath = //a[@id='assignPackageId']'.</msg>
+<status status="PASS" endtime="20200628 15:47:06.763" starttime="20200628 15:47:06.212"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:47:07.558" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-593.png"&gt;&lt;img src="selenium-screenshot-593.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:47:07.558" starttime="20200628 15:47:06.763"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:47:07.559" starttime="20200628 15:47:06.211"></status>
+</kw>
+<kw name="Search for Reseller in Add Packages" library="Resellers">
+<arguments>
+<arg>${Item["Glorep_Code"]}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Reseller_Search_Reseller_Code}</arg>
+</arguments>
+<msg timestamp="20200628 15:47:07.560" level="INFO">Clicking element 'xpath = //input[@class='select2-search__field']'.</msg>
+<status status="PASS" endtime="20200628 15:47:08.075" starttime="20200628 15:47:07.560"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Reseller_Search_Reseller_Code}</arg>
+<arg>${Element_Value}</arg>
+</arguments>
+<msg timestamp="20200628 15:47:08.076" level="INFO">Typing text 'MRsEx12' into text field 'xpath = //input[@class='select2-search__field']'.</msg>
+<status status="PASS" endtime="20200628 15:47:08.835" starttime="20200628 15:47:08.076"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${Reseller_Search_Reseller_Code}</arg>
+<arg>ENTER</arg>
+</arguments>
+<msg timestamp="20200628 15:47:08.836" level="INFO">Sending key(s) (u'ENTER',) to xpath = //input[@class='select2-search__field'] element.</msg>
+<msg timestamp="20200628 15:47:09.504" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20200628 15:47:09.504" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" endtime="20200628 15:47:09.966" starttime="20200628 15:47:08.835"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:47:10.432" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-594.png"&gt;&lt;img src="selenium-screenshot-594.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:47:10.433" starttime="20200628 15:47:09.966"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:47:10.433" starttime="20200628 15:47:07.559"></status>
+</kw>
+<kw name="Click on Add Package to Reseller" library="Resellers">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Reseller_Add_Package_To_Reseller}</arg>
+</arguments>
+<msg timestamp="20200628 15:47:10.436" level="INFO">Clicking element 'xpath = //a[@id='AssignPackageBtn']'.</msg>
+<status status="PASS" endtime="20200628 15:47:10.938" starttime="20200628 15:47:10.435"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200628 15:47:11.438" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-595.png"&gt;&lt;img src="selenium-screenshot-595.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20200628 15:47:11.439" starttime="20200628 15:47:10.939"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:47:11.439" starttime="20200628 15:47:10.433"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:47:11.439" starttime="20200628 15:47:04.313"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:47:11.439" starttime="20200628 15:47:04.310"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:47:11.440" starttime="20200628 15:46:55.548"></status>
+</kw>
+<kw type="teardown" name="Terminate Application Under Test" library="Common">
+<doc>Closes the Hybris Website in the &lt;BROWSER&gt;</doc>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20200628 15:47:11.756" starttime="20200628 15:47:11.444"></status>
+</kw>
+<status status="PASS" endtime="20200628 15:47:11.756" starttime="20200628 15:47:11.441"></status>
+</kw>
+<doc>Verify that the GloRep Application allows existing users to assign a package to a reseller</doc>
+<status status="PASS" endtime="20200628 15:47:11.757" critical="yes" starttime="20200628 15:46:40.288"></status>
+</test>
+<doc>This test suite contains test cases that is related to the Add Reseller functionality of the GloRep Application
+business users</doc>
+<status status="FAIL" endtime="20200628 15:47:11.760" starttime="20200628 15:45:33.356"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="3" pass="1">Critical Tests</stat>
+<stat fail="3" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="3" id="s1" name="Reseller" pass="1">Reseller</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200628 15:45:33.603" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:33.603" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:45:33.833" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:33.833" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:45:33.835" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:33.835" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:45:33.928" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:33.928" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:45:48.578" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:48.582" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:45:55.465" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:55.468" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:45:55.644" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:55.644" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:45:55.649" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:55.650" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:45:55.674" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:45:55.674" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:46:09.580" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:09.580" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:46:15.572" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Resellers.resource' in FOR loop starting on line 38: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:15.572" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Resellers.resource' in FOR loop starting on line 38: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:46:17.871" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:17.871" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:46:18.042" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:18.042" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:46:18.044" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:18.046" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:46:18.072" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:18.072" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:46:32.030" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:32.030" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:46:38.008" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Resellers.resource' in FOR loop starting on line 53: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:38.008" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Resellers.resource' in FOR loop starting on line 53: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:46:40.307" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:40.308" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 11: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:46:40.467" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:40.467" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/PageObjectIncludeList.resource' in FOR loop starting on line 16: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:46:40.469" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:40.469" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 13: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:46:40.488" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:40.489" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/CoreLibraries/ScenariosIncludeList.resource' in FOR loop starting on line 19: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:46:55.556" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:46:55.556" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Login.resource' in FOR loop starting on line 8: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+<msg timestamp="20200628 15:47:04.311" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Resellers.resource' in FOR loop starting on line 62: For loop header ':FOR' is deprecated. Use 'FOR' instead.</msg>
+<msg timestamp="20200628 15:47:04.311" level="WARN">Error in file '/home/ubuntu/Desktop/AstelRepos/AstelAutomationGlorep/Astel/AstelKeywordLibraries/Scenarios/Resellers.resource' in FOR loop starting on line 62: Marking for loop body with '\' is deprecated. Remove markers and use 'END' instead.</msg>
+</errors>
+</robot>
