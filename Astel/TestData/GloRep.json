@@ -54,30 +54,30 @@
         "AddReseller":
         [
             {
-                "Glorep_Code":"MRSEx12",
-                "Glorep_Username":"Mrsexpleo12@expleogroup.com",
+                "Glorep_Code":"Missexpleo21",
+                "Glorep_Username":"Missexpleo21@expleogroup.com",
                 "Glorep_Password":"Bill#777187",
                 "Glorep_Title":"Prof",
-                "Glorep_FirstName":"MrsTester12",
-                "Glorep_Lastname":"ExpleoTester12",
+                "Glorep_FirstName":"Missexpleo21",
+                "Glorep_Lastname":"ExpleoTester21",
                 "Glorep_Status":"Active",
                 "Glorep_Service_Provider":"IoT - IoT",
                 "Glorep_Base_Currency":"Rand",
-                "Glorep_Contact_Person":"MrsTester12",
-                "Glorep_Contact_Email":"mrsexpleo12@expleogroup.com",
+                "Glorep_Contact_Person":"Missexpleo21",
+                "Glorep_Contact_Email":"Missexpleo21@expleogroup.com",
                 "Glorep_Mobile_Number":"0826665544",
                 "Glorep_Landline_Number":"0315634253",
                 "Glorep_Technologies":"IoT",
                 "Glorep_Show_Storefront":"Active",
-                "Glorep_Physical_Address_1":"12 Ncondo Place",
+                "Glorep_Physical_Address_1":"21 Ncondo Place",
                 "Glorep_Physical_Address_2":"Durban"
             }
         ],
         "EditReseller":
         [
             {
-                "Glorep_Code":"MRsEx12",
-                "Glorep_Contact_Email":"mrsexpleo12@expleogroup.com",
+                "Glorep_Code":"Missexpleo21",
+                "Glorep_Contact_Email":"Missexpleo21@expleogroup.com",
                 "Glorep_Mobile_Number":"0825556666",
                 "Glorep_Landline_Number":"0315631111"
             }
@@ -85,7 +85,7 @@
         "AddPackageToReseller":
         [
             {
-                "Glorep_Code":"MRsEx12",
+                "Glorep_Code":"Missexpleo21",
                 "Glorep_Package":"GMS2 SharePoint Online (Plan 1)-Monthly"
             }
         ] 
@@ -96,37 +96,37 @@
         [
             {
                 "CustType":"Consumer",
-                "CustTitle":"Miss",
-                "CustDomain":"LydiaExpleo",
-                "CustIDNum":"1234567891025",
+                "CustTitle":"Mrs",
+                "CustDomain":"Greg",
+                "CustIDNum":"1234567891085",
                 "CustStatus":"Active",
-                "CustEmail":"Lydia@hotmail.com",
+                "CustEmail":"greg@hotmail.com",
                 "CustMobile":"1234567890",
                 "CustLandline":"1234567890",
                 "CustLandlineChange":"9999999999",
-                "CustAddressLine1":"5120",
-                "CustAddressLine2":"ABC Street",
+                "CustAddressLine1":"3456",
+                "CustAddressLine2":"SED Street",
                 "CustAddressLine3":"Durban",
                 "CustAddressLine4":"KZN",
-                "CustPostalCode":"5000",
+                "CustPostalCode":"4097",
                 "CustPrefferedCurrency":"Rands",
                 "CustRegion":"Not Applicable",
                 "CustPrefferedLanguage":"English",
                 "CustPaymentType":"Cash/EFT",
-                "Vat":"VAT @ 15%",
+                "Vat":"AutomationTestVat12",
                 "DeliveryMethod":"Email",
                 "Classification":"Normal",
-                "Remarks":"Test Remarks",
+                "Remarks":"Test Automation Remarks",
                 "JobTitle":"Tester",
                 "FunctionArea":"IT",
-                "FirstName":"Lydia",
-                "LastName":"Barker",
+                "FirstName":"Greg",
+                "LastName":"Beau",
                 "Birthday":"27/04/1990",
-                "Mobile":"0142583697",
-                "Office":"0142582297",
-                "Email":"LydiaBarker@hotmail.com",
-                "Comments":"Test Comments",
-                "Search":"Lydia Barker"
+                "Mobile":"0142583123",
+                "Office":"0142582123",
+                "Email":"greg@hotmail.com",
+                "Comments":"Test Automation Comments",
+                "Search":"Greg Beau"
             }
         ]
             
@@ -139,59 +139,59 @@
                 "QuoteSearch":"GR Visio Plan 2 for faculty-Monthly",
                 "CustType":"Consumer",
                 "CustTitle":"Miss",
-                "Domain":"ExpleoDomain7",
-                "CustIDNum":"1234567891025",
+                "Domain":"QuoteAutomation1357",
+                "CustIDNum":"1234567891088",
                 "CustStatus":"Active",
-                "CustEmail":"Holly@hotmail.com",
+                "CustEmail":"QuoteAutomation1357@hotmail.com",
                 "CustMobile":"12345678900",
                 "CustLandline":"1234567890",
                 "CustAddressLine1":"5120",
                 "CustAddressLine2":"ABC Street",
                 "CustAddressLine3":"Durban",
                 "CustAddressLine4":"KZN",
-                "CustPostalCode":"5000",
+                "CustPostalCode":"4097",
                 "CustPrefferedCurrency":"Rands",
                 "CustRegion":"Not Applicable",
                 "CustPrefferedLanguage":"English",
                 "CustPaymentType":"Cash/EFT",
-                "Vat":"VAT @ 15%",
+                "Vat":"AutomationTestVat12",
                 "DeliveryMethod":"Email",
                 "Classification":"Normal",
-                "Remarks":"Test Remarks",
+                "Remarks":"Test Automation Remarks",
                 "JobTitle":"Tester",
                 "FunctionArea":"IT",
-                "FirstName":"Holly",
-                "LastName":"Holly",
+                "FirstName":"Freddy",
+                "LastName":"Kruger",
                 "Birthday":"27/04/1990",
                 "Mobile":"01425836947",
                 "Office":"0142582297",
-                "Email":"Holly@hotmail.com",
+                "Email":"QuoteAutomation1357@hotmail.com",
                 "Comments":"Test Comments",
-                "SAFirstName":"Holly",
-                "SALastName":"Holly",
-                "SAEmail":"Holly@hotmail.com",
+                "SAFirstName":"Freddy",
+                "SALastName":"Kruger",
+                "SAEmail":"QuoteAutomation1357@hotmail.com",
                 "SAAgreementDate":"23/06/2020",
                 "BillCycle":"Reseller Bill Cycle",
                 "ContractStartDate":"23/06/2020",
                 "ContractEndDate":"23/06/2022",
-                "FriendlyName":"Holly",
-                "ResourceGroup":"Holly"
+                "FriendlyName":"Freddy",
+                "ResourceGroup":"Freddy"
             }
         ],
         "ExistingCustomer":
         [
             {
                 "QuoteSearch":"GR Visio Plan 2 for faculty-Monthly",
-                "CustomerSearch":"Lydia Barker",
-                "SAFirstName":"Lydia",
-                "SALastName":"Lydia",
-                "SAEmail":"Lydia@hotmail.com",
+                "CustomerSearch":"Freddy Kruger",
+                "SAFirstName":"Freddy",
+                "SALastName":"Kruger",
+                "SAEmail":"QuoteAutomation1357@hotmail.com",
                 "SAAgreementDate":"23/06/2020",
                 "BillCycle":"Reseller Bill Cycle",
                 "ContractStartDate":"23/06/2020",
                 "ContractEndDate":"23/06/2022",
-                "FriendlyName":"Lydia",
-                "ResourceGroup":"Lydia"
+                "FriendlyName":"Freddy",
+                "ResourceGroup":"Freddy"
 
             }
         ]
@@ -202,18 +202,18 @@
         "AddNewAdminUser":
         [
             {
-                "Glorep_Admin_Username":"texpleo12@astel.co.za",
+                "Glorep_Admin_Username":"TestAdmin12345@astel.co.za",
                 "Glorep_Admin_Password":"Bill#777187",
-                "Glorep_Admin_FirstName":"AutoMationTester12",
-                "Glorep_Admin_Lastname":"ExpleoTester12",
-                "Glorep_Admin_Job_Title":"Automation Tester12",
+                "Glorep_Admin_FirstName":"TestAdmin",
+                "Glorep_Admin_Lastname":"ExpleoTester",
+                "Glorep_Admin_Job_Title":"Automation TestAdmin",
                 "Glorep_Admin_Mobile_Number":"0825556666"
             }
         ],
         "EditAdminUser":
         [
             {
-                "Glorep_Admin_Username":"texpleo12@astel.co.za",
+                "Glorep_Admin_Username":"TestAdmin12345@astel.co.za",
                 "Glorep_Admin_Password":"Bill#777187",
                 "Glorep_Admin_Mobile_Number":"0826667777"
             }
@@ -224,25 +224,25 @@
         "ExistingUser":
         [
             {
-                "Glorep_Username":"Usertexpleo@astel.co.za",
+                "Glorep_Username":"TestUser12345@astel.co.za",
                 "Glorep_Password":"Bill#777187"
             }
         ],
         "AddNewUser":
         [
             {
-                "Glorep_Username":"UserReseller12@astel.co.za",
+                "Glorep_Username":"TestUser12345@astel.co.za",
                 "Glorep_Password":"Bill#777187",
-                "Glorep_FirstName":"AutoMationResellerUserTester12",
+                "Glorep_FirstName":"AutoMationResellerTestUsers",
                 "Glorep_Lastname":"ExpleoTester",
-                "Glorep_Job_Title":"Automation Reseller User Tester",
+                "Glorep_Job_Title":"Automation Reseller User Testers",
                 "Glorep_Mobile_Number":"0825556666"
             }
         ],
         "EditUser":
         [
             {
-                "Glorep_Username":"UserReseller12@astel.co.za",
+                "Glorep_Username":"TestUser12345@astel.co.za",
                 "Glorep_Password":"Bill#777187",
                 "Glorep_Mobile_Number":"0826667777"
             }
@@ -250,7 +250,7 @@
         "AddUserGroups":
         [
             {
-                "Glorep_Username":"UserReseller@astel.co.za",
+                "Glorep_Username":"TestUser12345@astel.co.za",
                 "Glorep_Password":"Bill#777187",
                 "Glorep_User_Group":"Administrator"
             }
@@ -261,10 +261,10 @@
         "AddCurrencyDetails":
         [
             {
-                "Glorep_Currency_Code":"en-GH",
-                "Glorep_Currency_Description":"GHS Cedi",
-                "Glorep_Currency_Symbol":"C",
-                "Glorep_Currency_ISO_Code":"GHS",
+                "Glorep_Currency_Code":"en-CA",
+                "Glorep_Currency_Description":"Canadian Dollar",
+                "Glorep_Currency_Symbol":"C$",
+                "Glorep_Currency_ISO_Code":"CAD",
                 "Glorep_Currency_Status":"Active",
                 "Glorep_Currency_Override_Format":""
             }
@@ -272,8 +272,8 @@
         "AddVATDetails":
         [
             {
-                "Glorep_VAT_Code":"TestVC140",
-                "Glorep_VAT_Description":"AutomationTestVat12",
+                "Glorep_VAT_Code":"TestVC1354",
+                "Glorep_VAT_Description":"AutomationTestVat135",
                 "Glorep_VAT_Value":"12",
                 "Glorep_VAT_Status":"Active",
                 "Glorep_VAT_Start_Date":"01/08/2020",
@@ -295,14 +295,14 @@
         "EditCurrencyDetails":
         [
             {
-                "Glorep_Currency_Code":"en-GH",
-                "Glorep_Currency_Description":"Cedi"
+                "Glorep_Currency_Code":"en-CA",
+                "Glorep_Currency_Description":"CAD Dollar"
             }
         ],
         "EditVATDetails":
         [
             {
-                "Glorep_VAT_Code":"TestVC140",
+                "Glorep_VAT_Code":"TestVC1354",
                 "Glorep_VAT_Value":"8"
             }
         ],
@@ -320,7 +320,7 @@
         "AddNewGroup":
         [
             {
-                "Glorep_Groups_Name":"Automation12 Test New Group",
+                "Glorep_Groups_Name":"Automation246823 Test New Group",
                 "Glorep_Groups_Subgroup_Item":"View Customer",
                 "Glorep_Groups_Role_Item":"Edit Customer",
                 "Glorep_Groups_Role_Item_Check":"EditCustomer"

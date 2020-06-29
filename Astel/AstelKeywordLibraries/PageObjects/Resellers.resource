@@ -8,7 +8,7 @@ Library  Selenium2Library
 # Reseller Main Page 
 ${Add_New_Reseller}                     xpath = //a[@id='newReseller']
 ${Edit_Existing_Reseller_Code}          xpath = //a[@id='GoToReseller']//span
-${Search_Reseller}                      xpath = //label[contains(text(),'Search:')]//input
+${Search_Reseller}                      xpath = //input[@placeholder='Search']
 ${View_Packages}                        xpath = //a[@id='ViewPackages']//span
 ${LoginAsReseller}                      xpath = //a[@id='Login']
 ${LoginAsResellerValue}                 dummy
@@ -167,7 +167,7 @@ Click Login As Reseller
 Click on Add new Reseller
     Click Element    ${Add_New_Reseller}
     # Sleep  10s
-    Wait Until Element Is Visible     ${Reseller_PopUp}
+    Wait Until Element Is Visible     ${Reseller_PopUp_Add}
     Capture Page Screenshot 
 
 Click Submit Reseller
@@ -192,6 +192,7 @@ Click on Add Package to Reseller
 
 Search for Reseller
     [Arguments]    ${Element_Value}
+    Wait Until Element Is Visible       ${Search_Reseller}
     Input text     ${Search_Reseller}     ${Element_Value}
     Capture Page Screenshot 
 

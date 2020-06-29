@@ -17,12 +17,12 @@ Test Editing a Reseller User
     Set Selenium Speed    0.2
     Edit Existing Reseller
 
-Test View Reseller View Packages 
-    [Documentation]  Verify that the GloRep Application allows existing users to view packages assigned to a reseller
-    Set Selenium Speed    0.2
-    View Reseller Packages
-
 Test Reseller Add Packages 
     [Documentation]  Verify that the GloRep Application allows existing users to assign a package to a reseller
     Set Selenium Speed    0.2
     Add Reseller Packages
+
+Test View Reseller View Packages 
+    [Documentation]  Verify that the GloRep Application allows existing users to view packages assigned to a reseller
+    Set Selenium Speed    0.2
+    View Reseller Packages

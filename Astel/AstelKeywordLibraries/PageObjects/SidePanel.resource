@@ -24,6 +24,9 @@ ${Search_Bar}                                   xpath = //input[@class='form-con
 
 ${Admin_Assign_Solutions}                       xpath = //span[contains(text(),'Assign Solutions')]
 
+${Quote}                                        xpath = //span[contains(text(),'Quotes')]
+${CreateQuote}                                  xpath = //a[contains(text(),'New Quote')]
+
 *** Keywords ***
 # Input GloRep Login Email Address
 #     [Arguments] 	${Email_Value}
@@ -32,6 +35,14 @@ ${Admin_Assign_Solutions}                       xpath = //span[contains(text(),'
 Click View Customer Menu
     Click Element       ${ViewCustomerMenuReseller}
     Capture Page Screenshot
+
+Click Quote Menu Item 
+    Click Element       ${Quote}
+    Capture Page Screenshot
+
+Click Create Quote Menu Item 
+    Click Element       ${CreateQuote}
+    Capture Page Screenshot 
 
 Click Customer Menu Item
     Click Element       ${CustomerMenuReseller}

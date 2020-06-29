@@ -10,6 +10,7 @@ Test Teardown  Terminate Application Under Test
 Test Quote Creation for New User
     [Documentation]  Verify that the GloRep Application allows quote generation for new customer
     Set Selenium Speed    0.2
+    # Ensure cart for customer is reseller before starting this test
     Create Quote New Customer
 
 Test Quote Creation for Existing User

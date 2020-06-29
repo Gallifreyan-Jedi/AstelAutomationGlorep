@@ -275,7 +275,7 @@ Click Group Roles
 Select Roles
     [Arguments]         ${Groups_Roles_Value}
     Click Element       ${Groups_Roles}
-    Scroll Element Into View        ${Groups_Roles_Chosen}
+    # Scroll Element Into View        ${Groups_Roles_Chosen}
     Click Element       ${Groups_Roles_Chosen}
     Capture Page Screenshot 
 
@@ -286,7 +286,7 @@ Click Add Selected Role
 Validate Role Added
     [Arguments]     ${Groups_Roles_Value}
     Input Text      ${Groups_Roles_Search}      ${Groups_Roles_Value}
-    Page should Contain Element    ${Groups_Roles_Chosen}
+    Page should Contain Element    ${Groups_Roles_Check}
     Capture Page Screenshot
 
 Click Delete Group
