@@ -19,9 +19,9 @@ Add New User
     \  Click User Force Change Password
     \  Click User Submit Button  
     \  Click Close User Groups Dialog
-    \  Search for Reseller      ${Item["Glorep_Username"]}
-    \  Click Edit User Button
-    \  Validate User Updated Mobile Number   ${Item["Glorep_Mobile_Number"]}
+    # \  Search for Reseller      ${Item["Glorep_Username"]}
+    # \  Click Edit User Button
+    # \  Validate User Updated Mobile Number   ${Item["Glorep_Mobile_Number"]}
 
 Edit Existing User
     Get GloRep Edit User data 

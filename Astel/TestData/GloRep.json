@@ -202,18 +202,18 @@
         "AddNewAdminUser":
         [
             {
-                "Glorep_Admin_Username":"TestAdmin12345@astel.co.za",
+                "Glorep_Admin_Username":"AutoAdmin123@astel.co.za",
                 "Glorep_Admin_Password":"Bill#777187",
-                "Glorep_Admin_FirstName":"TestAdmin",
+                "Glorep_Admin_FirstName":"AutoAdmin",
                 "Glorep_Admin_Lastname":"ExpleoTester",
-                "Glorep_Admin_Job_Title":"Automation TestAdmin",
+                "Glorep_Admin_Job_Title":"Automation AutoAdmin",
                 "Glorep_Admin_Mobile_Number":"0825556666"
             }
         ],
         "EditAdminUser":
         [
             {
-                "Glorep_Admin_Username":"TestAdmin12345@astel.co.za",
+                "Glorep_Admin_Username":"AutoAdmin123@astel.co.za",
                 "Glorep_Admin_Password":"Bill#777187",
                 "Glorep_Admin_Mobile_Number":"0826667777"
             }
@@ -224,16 +224,16 @@
         "ExistingUser":
         [
             {
-                "Glorep_Username":"TestUser12345@astel.co.za",
+                "Glorep_Username":"TestUser3567@astel.co.za",
                 "Glorep_Password":"Bill#777187"
             }
         ],
         "AddNewUser":
         [
             {
-                "Glorep_Username":"TestUser12345@astel.co.za",
+                "Glorep_Username":"TestUser3567@astel.co.za",
                 "Glorep_Password":"Bill#777187",
-                "Glorep_FirstName":"AutoMationResellerTestUsers",
+                "Glorep_FirstName":"AutoMationResellerTestUsersers",
                 "Glorep_Lastname":"ExpleoTester",
                 "Glorep_Job_Title":"Automation Reseller User Testers",
                 "Glorep_Mobile_Number":"0825556666"
@@ -242,7 +242,7 @@
         "EditUser":
         [
             {
-                "Glorep_Username":"TestUser12345@astel.co.za",
+                "Glorep_Username":"TestUser3567@astel.co.za",
                 "Glorep_Password":"Bill#777187",
                 "Glorep_Mobile_Number":"0826667777"
             }
@@ -250,7 +250,7 @@
         "AddUserGroups":
         [
             {
-                "Glorep_Username":"TestUser12345@astel.co.za",
+                "Glorep_Username":"TestUser3567@astel.co.za",
                 "Glorep_Password":"Bill#777187",
                 "Glorep_User_Group":"Administrator"
             }
@@ -320,7 +320,7 @@
         "AddNewGroup":
         [
             {
-                "Glorep_Groups_Name":"Automation246823 Test New Group",
+                "Glorep_Groups_Name":"Automation Test New Group1234",
                 "Glorep_Groups_Subgroup_Item":"View Customer",
                 "Glorep_Groups_Role_Item":"Edit Customer",
                 "Glorep_Groups_Role_Item_Check":"EditCustomer"
