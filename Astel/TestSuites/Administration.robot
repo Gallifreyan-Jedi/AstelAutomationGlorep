@@ -7,42 +7,42 @@ Test Setup  Launch Application Under Test
 Test Teardown  Terminate Application Under Test
 
 *** Test Cases ***
-# Test Creating an Admin User
-#     [Documentation]  Verify that the GloRep Application allows existing users to add a reseller
-#     Set Selenium Speed    0.2
-#     Add New Admin User
+Test Creating an Admin User
+    [Documentation]  Verify that the GloRep Application allows existing users to add a reseller
+    Set Selenium Speed    0.2
+    Add New Admin User
 
-# Test Editing an Admin User
-#     [Documentation]  Verify that the GloRep Application allows existing users to add an admin user
-#     Set Selenium Speed    0.2
-#     Edit Existing Admin User
-# 
-# Test Create a User
-#     [Documentation]  Verify that the GloRep Application allows existing users to add a user as a reseller
-#     Set Selenium Speed    0.2
-#     Add New User
+Test Editing an Admin User
+    [Documentation]  Verify that the GloRep Application allows existing users to add an admin user
+    Set Selenium Speed    0.2
+    Edit Existing Admin User
 
-# Test Edit an Existing User
-#     [Documentation]  Verify that the GloRep Application allows existing users to Edit a user as a reseller
-#     Set Selenium Speed    0.2
-#     Edit Existing User
+Test Create a User
+    [Documentation]  Verify that the GloRep Application allows existing users to add a user as a reseller
+    Set Selenium Speed    0.2
+    Add New User
 
-# Test Editing a User Password
-#     [Documentation]  Verify that the GloRep Application allows existing users to Edit a user Password as a reseller
-#     Set Selenium Speed    0.2
-#     Edit User Password
+Test Edit an Existing User
+    [Documentation]  Verify that the GloRep Application allows existing users to Edit a user as a reseller
+    Set Selenium Speed    0.2
+    Edit Existing User
 
-# Test Deactivating a User
-#     [Documentation]  Verify that the GloRep Application allows existing users to Deactivate a user as a reseller
-#     Set Selenium Speed    0.2
-#     Deactivate Existing User
-# 
-# Test Adding User to User Groups
-#     [Documentation]  Verify that the GloRep Application allows existing users to add a user to a user group 
-#     Set Selenium Speed    0.2
-#     Add user to User Group
+Test Editing a User Password
+    [Documentation]  Verify that the GloRep Application allows existing users to Edit a user Password as a reseller
+    Set Selenium Speed    0.2
+    Edit User Password
 
-# Test Locking and Unlocking User Account
-#     [Documentation]  Verify that the GloRep Application allows existing users to Lock a user account 
-#     Set Selenium Speed    0.2
-#     Lock and Unlock User account
+Test Deactivating a User
+    [Documentation]  Verify that the GloRep Application allows existing users to Deactivate a user as a reseller
+    Set Selenium Speed    0.2
+    Deactivate Existing User
+
+Test Adding User to User Groups
+    [Documentation]  Verify that the GloRep Application allows existing users to add a user to a user group 
+    Set Selenium Speed    0.2
+    Add user to User Group
+
+Test Locking and Unlocking User Account
+    [Documentation]  Verify that the GloRep Application allows existing users to Lock a user account 
+    Set Selenium Speed    0.2
+    Lock and Unlock User account

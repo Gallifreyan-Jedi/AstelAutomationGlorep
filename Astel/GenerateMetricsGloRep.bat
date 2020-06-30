@@ -11,4 +11,4 @@ ROBOCOPY "./Results/Notifications" "RobotMetrics" Notifications_Out.xml /mir
 ROBOCOPY "./Results/Subscriptions" "RobotMetrics" Subscriptions_Out.xml /mir
 ROBOCOPY "./Results/Billing" "RobotMetrics" Billing_Out.xml /mir
 
-robotmetrics --inputpath ./RobotMetrics/ --output "Login_Out.xml,Customer_Out.xml,Charges_Out.xml,Services_Out.xml,Packages_Out.xml,Profile_Out.xml,Reasons_Out.xml,Discounts_Out.xml,Search_Out.xml,Notifications_Out.xml,Subscriptions_Out.xml,Billing_Out.xml"  --logo "456.png"
+robotmetrics --inputpath ./RobotMetrics/ --output "Administration_Out.xml,Configuration_Out.xml,Customer_Out.xml,Login_Out.xml,Quotes_Out.xml,Reseller_Out.xml"  --logo "456.png"

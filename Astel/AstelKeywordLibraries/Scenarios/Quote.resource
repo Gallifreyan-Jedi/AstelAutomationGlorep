@@ -81,7 +81,7 @@ Create Quote Existing Customer
     \  Click My Cart Button 
     \  Click Checkout Button 
     \  Sleep    15s
-    # \  Click Existing Customer Button
+    \  Click Existing Customer Button
     \  Select Existing Customer                         ${Item["CustomerSearch"]}
     \  Sleep  5s
     \  Click Next Button 
@@ -89,12 +89,12 @@ Create Quote Existing Customer
     \  Click Next Button 
     \  Click Customer Submit Button
     \  Sleep  5s
-    \  Click Service Agreement Link
-    \  Input Service Agreement First Name               ${Item["SAFirstName"]}
-    \  Input Service Agreement Last Name                ${Item["SALastName"]}
-    \  Input Service Agreement Email                    ${Item["SAEmail"]}
-    \  Input Service Agreement Date                     ${Item["SAAgreementDate"]}
-    \  Click Service Agreement Submit
+    # \  Click Service Agreement Link
+    # \  Input Service Agreement First Name               ${Item["SAFirstName"]}
+    # \  Input Service Agreement Last Name                ${Item["SALastName"]}
+    # \  Input Service Agreement Email                    ${Item["SAEmail"]}
+    # \  Input Service Agreement Date                     ${Item["SAAgreementDate"]}
+    # \  Click Service Agreement Submit
     \  Sleep  5s
     \  Click Details Button
     \  Select Quote Bill Cycle                          ${Item["BillCycle"]}

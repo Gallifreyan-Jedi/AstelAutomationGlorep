@@ -51,6 +51,7 @@ Click Add To Cart Button
 	Capture Page Screenshot    
 
 Click My Cart Button 
+	Wait until Element Is Visible 	${MyCart}
 	Click Element    ${MyCart}	
 	Capture Page Screenshot    
 
